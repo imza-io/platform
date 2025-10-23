@@ -1,0 +1,898 @@
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="imza.io platformu için mimari ve ürün dokümantasyonu">
+      
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:8000/platform/architecture/c4/plantuml/">
+      
+      
+        <link rel="prev" href="../code/">
+      
+      
+        <link rel="next" href="../../../processes/">
+      
+      
+      <link rel="icon" href="../../../_assets/images/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>C4 - PlantUML Örnekleri - imza.io Platform</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../_assets/styles/overrides.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#plantuml-ile-c4-ve-diyagramlar" class="md-skip">
+          Ana içeriğe geç
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Başlık">
+    <a href="../../.." title="imza.io Platform" class="md-header__button md-logo" aria-label="imza.io Platform" data-md-component="logo">
+      
+  <img src="../../../_assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            imza.io Platform
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C4 - PlantUML Örnekleri
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Koyu moda geç"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Koyu moda geç" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Aydınlık moda geç"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Aydınlık moda geç" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Ara" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Ara">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Temizle" aria-label="Temizle" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Arama başlatılıyor
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/imza-io/platform" title="Depoya git" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    imza-io/platform
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigasyon" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="imza.io Platform" class="md-nav__button md-logo" aria-label="imza.io Platform" data-md-component="logo">
+      
+  <img src="../../../_assets/images/logo.svg" alt="logo">
+
+    </a>
+    imza.io Platform
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/imza-io/platform" title="Depoya git" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    imza-io/platform
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anasayfa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Mimari
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mimari
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Genel Bakış
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    C4 Modeli
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            C4 Modeli
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Context
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Container
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    PlantUML Örnekleri
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    PlantUML Örnekleri
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basit-aks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basit Akış
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c4-c4-plantuml-ile" class="md-nav__link">
+    <span class="md-ellipsis">
+      C4 (C4-PlantUML ile)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Süreçler
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../products/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ürünler
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projeler
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Projeler
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Genel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Örnek Proje
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Örnek Proje
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/sample-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proje
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/sample-project/releases/0.1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    v0.1.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="plantuml-ile-c4-ve-diyagramlar">PlantUML ile C4 ve Diyagramlar<a class="headerlink" href="#plantuml-ile-c4-ve-diyagramlar" title="Permanent link">&para;</a></h1>
+<p>Aşağıdaki örnekler PlantUML server kullanılarak render edilir. Markdown içinde ```plantuml blokları yeterlidir.</p>
+<h2 id="basit-aks">Basit Akış<a class="headerlink" href="#basit-aks" title="Permanent link">&para;</a></h2>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgZGF0YS1kaWFncmFtLXR5cGU9IlNFUVVFTkNFIiBoZWlnaHQ9IjM5NHB4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBzdHlsZT0id2lkdGg6MzAwcHg7aGVpZ2h0OjM5NHB4O2JhY2tncm91bmQ6I0ZGRkZGRjsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDMwMCAzOTQiIHdpZHRoPSIzMDBweCIgem9vbUFuZFBhbj0ibWFnbmlmeSI+PHRpdGxlPiYjMzA0O216YWxhbWEgQWsmIzMwNTsmIzM1MTsmIzMwNTsgKEJhc2l0KTwvdGl0bGU+PGRlZnMvPjxnPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIxNzYuMjM3MyIgeD0iNjEuMDc1IiB5PSIyNy45OTUxIj4mIzMwNDttemFsYW1hIEFrJiMzMDU7JiMzNTE7JiMzMDU7IChCYXNpdCk8L3RleHQ+PGc+PHRpdGxlPkt1bGxhbmljaTwvdGl0bGU+PHJlY3QgZmlsbD0iIzAwMDAwMCIgZmlsbC1vcGFjaXR5PSIwLjAwMDAwIiBoZWlnaHQ9IjE5NC43OTY5IiB3aWR0aD0iOCIgeD0iMzMuMzgwOSIgeT0iMTE4LjU5MzgiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTtzdHJva2UtZGFzaGFycmF5OjUsNTsiIHgxPSIzNyIgeDI9IjM3IiB5MT0iMTE4LjU5MzgiIHkyPSIzMTMuMzkwNiIvPjwvZz48Zz48dGl0bGU+V2ViIFBvcnRhbDwvdGl0bGU+PHJlY3QgZmlsbD0iIzAwMDAwMCIgZmlsbC1vcGFjaXR5PSIwLjAwMDAwIiBoZWlnaHQ9IjE5NC43OTY5IiB3aWR0aD0iOCIgeD0iMTI0LjcxMDQiIHk9IjExOC41OTM4Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7c3Ryb2tlLWRhc2hhcnJheTo1LDU7IiB4MT0iMTI4LjQ1MzEiIHgyPSIxMjguNDUzMSIgeTE9IjExOC41OTM4IiB5Mj0iMzEzLjM5MDYiLz48L2c+PGc+PHRpdGxlPkJhY2tlbmQgQVBJPC90aXRsZT48cmVjdCBmaWxsPSIjMDAwMDAwIiBmaWxsLW9wYWNpdHk9IjAuMDAwMDAiIGhlaWdodD0iMTk0Ljc5NjkiIHdpZHRoPSI4IiB4PSIyMzkuOTA3MiIgeT0iMTE4LjU5MzgiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTtzdHJva2UtZGFzaGFycmF5OjUsNTsiIHgxPSIyNDMuNDI3MiIgeDI9IjI0My40MjcyIiB5MT0iMTE4LjU5MzgiIHkyPSIzMTMuMzkwNiIvPjwvZz48ZyBjbGFzcz0icGFydGljaXBhbnQgcGFydGljaXBhbnQtaGVhZCIgZGF0YS1wYXJ0aWNpcGFudD0iVSI+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNTguNzYxNyIgeD0iNSIgeT0iMTE1LjI5MiI+S3VsbGFuaWNpPC90ZXh0PjxlbGxpcHNlIGN4PSIzNy4zODA5IiBjeT0iNTAuNzk2OSIgZmlsbD0iI0UyRTJGMCIgcng9IjgiIHJ5PSI4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiLz48cGF0aCBkPSJNMzcuMzgwOSw1OC43OTY5IEwzNy4zODA5LDg1Ljc5NjkgTTI0LjM4MDksNjYuNzk2OSBMNTAuMzgwOSw2Ni43OTY5IE0zNy4zODA5LDg1Ljc5NjkgTDI0LjM4MDksMTAwLjc5NjkgTTM3LjM4MDksODUuNzk2OSBMNTAuMzgwOSwxMDAuNzk2OSIgZmlsbD0ibm9uZSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PC9nPjxnIGNsYXNzPSJwYXJ0aWNpcGFudCBwYXJ0aWNpcGFudC10YWlsIiBkYXRhLXBhcnRpY2lwYW50PSJVIj48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI1OC43NjE3IiB4PSI1IiB5PSIzMjUuMzg1NyI+S3VsbGFuaWNpPC90ZXh0PjxlbGxpcHNlIGN4PSIzNy4zODA5IiBjeT0iMzM3LjE4NzUiIGZpbGw9IiNFMkUyRjAiIHJ4PSI4IiByeT0iOCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHBhdGggZD0iTTM3LjM4MDksMzQ1LjE4NzUgTDM3LjM4MDksMzcyLjE4NzUgTTI0LjM4MDksMzUzLjE4NzUgTDUwLjM4MDksMzUzLjE4NzUgTTM3LjM4MDksMzcyLjE4NzUgTDI0LjM4MDksMzg3LjE4NzUgTTM3LjM4MDksMzcyLjE4NzUgTDUwLjM4MDksMzg3LjE4NzUiIGZpbGw9Im5vbmUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjwvZz48ZyBjbGFzcz0icGFydGljaXBhbnQgcGFydGljaXBhbnQtaGVhZCIgZGF0YS1wYXJ0aWNpcGFudD0iV1AiPjxyZWN0IGZpbGw9IiNFMkUyRjAiIGhlaWdodD0iMzAuMjk2OSIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iOTAuNTE0NiIgeD0iODMuNDUzMSIgeT0iODcuMjk2OSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9Ijc2LjUxNDYiIHg9IjkwLjQ1MzEiIHk9IjEwNy4yOTIiPldlYiBQb3J0YWw8L3RleHQ+PC9nPjxnIGNsYXNzPSJwYXJ0aWNpcGFudCBwYXJ0aWNpcGFudC10YWlsIiBkYXRhLXBhcnRpY2lwYW50PSJXUCI+PHJlY3QgZmlsbD0iI0UyRTJGMCIgaGVpZ2h0PSIzMC4yOTY5IiByeD0iMi41IiByeT0iMi41IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSI5MC41MTQ2IiB4PSI4My40NTMxIiB5PSIzMTIuMzkwNiIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9Ijc2LjUxNDYiIHg9IjkwLjQ1MzEiIHk9IjMzMi4zODU3Ij5XZWIgUG9ydGFsPC90ZXh0PjwvZz48ZyBjbGFzcz0icGFydGljaXBhbnQgcGFydGljaXBhbnQtaGVhZCIgZGF0YS1wYXJ0aWNpcGFudD0iQVBJIj48cmVjdCBmaWxsPSIjRTJFMkYwIiBoZWlnaHQ9IjMwLjI5NjkiIHJ4PSIyLjUiIHJ5PSIyLjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9IjEwMC45NiIgeD0iMTkzLjQyNzIiIHk9Ijg3LjI5NjkiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI4Ni45NiIgeD0iMjAwLjQyNzIiIHk9IjEwNy4yOTIiPkJhY2tlbmQgQVBJPC90ZXh0PjwvZz48ZyBjbGFzcz0icGFydGljaXBhbnQgcGFydGljaXBhbnQtdGFpbCIgZGF0YS1wYXJ0aWNpcGFudD0iQVBJIj48cmVjdCBmaWxsPSIjRTJFMkYwIiBoZWlnaHQ9IjMwLjI5NjkiIHJ4PSIyLjUiIHJ5PSIyLjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9IjEwMC45NiIgeD0iMTkzLjQyNzIiIHk9IjMxMi4zOTA2Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iODYuOTYiIHg9IjIwMC40MjcyIiB5PSIzMzIuMzg1NyI+QmFja2VuZCBBUEk8L3RleHQ+PC9nPjxnIGNsYXNzPSJtZXNzYWdlIiBkYXRhLXBhcnRpY2lwYW50LTE9IlUiIGRhdGEtcGFydGljaXBhbnQtMj0iV1AiPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMTE2LjcxMDQsMTQ1LjcyNjYsMTI2LjcxMDQsMTQ5LjcyNjYsMTE2LjcxMDQsMTUzLjcyNjYsMTIwLjcxMDQsMTQ5LjcyNjYiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7IiB4MT0iMzcuMzgwOSIgeDI9IjEyMi43MTA0IiB5MT0iMTQ5LjcyNjYiIHkyPSIxNDkuNzI2NiIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjY3LjMyOTYiIHg9IjQ0LjM4MDkiIHk9IjE0NC42NjA2Ij5CZWxnZXlpIGEmIzIzMTs8L3RleHQ+PC9nPjxnIGNsYXNzPSJtZXNzYWdlIiBkYXRhLXBhcnRpY2lwYW50LTE9IldQIiBkYXRhLXBhcnRpY2lwYW50LTI9IkFQSSI+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyMzEuOTA3MiwxNzQuODU5NCwyNDEuOTA3MiwxNzguODU5NCwyMzEuOTA3MiwxODIuODU5NCwyMzUuOTA3MiwxNzguODU5NCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTsiIHgxPSIxMjguNzEwNCIgeDI9IjIzNy45MDcyIiB5MT0iMTc4Ljg1OTQiIHkyPSIxNzguODU5NCIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjcwLjc2MzciIHg9IjEzNS43MTA0IiB5PSIxNzMuNzkzNSI+JiMzMDQ7bXphIGlzdGUmIzI4NztpPC90ZXh0PjwvZz48ZyBjbGFzcz0ibWVzc2FnZSIgZGF0YS1wYXJ0aWNpcGFudC0xPSJBUEkiIGRhdGEtcGFydGljaXBhbnQtMj0iV1AiPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMTM5LjcxMDQsMjAzLjk5MjIsMTI5LjcxMDQsMjA3Ljk5MjIsMTM5LjcxMDQsMjExLjk5MjIsMTM1LjcxMDQsMjA3Ljk5MjIiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWRhc2hhcnJheToyLDI7IiB4MT0iMTMzLjcxMDQiIHgyPSIyNDIuOTA3MiIgeTE9IjIwNy45OTIyIiB5Mj0iMjA3Ljk5MjIiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI5MS4xOTY4IiB4PSIxNDUuNzEwNCIgeT0iMjAyLjkyNjMiPiYjMzA0O216YSBvdHVydW11PC90ZXh0PjwvZz48ZyBjbGFzcz0ibWVzc2FnZSIgZGF0YS1wYXJ0aWNpcGFudC0xPSJVIiBkYXRhLXBhcnRpY2lwYW50LTI9IldQIj48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjExNi43MTA0LDIzMy4xMjUsMTI2LjcxMDQsMjM3LjEyNSwxMTYuNzEwNCwyNDEuMTI1LDEyMC43MTA0LDIzNy4xMjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7IiB4MT0iMzcuMzgwOSIgeDI9IjEyMi43MTA0IiB5MT0iMjM3LjEyNSIgeTI9IjIzNy4xMjUiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIzNC4xMzEzIiB4PSI0NC4zODA5IiB5PSIyMzIuMDU5MSI+T25heTwvdGV4dD48L2c+PGcgY2xhc3M9Im1lc3NhZ2UiIGRhdGEtcGFydGljaXBhbnQtMT0iV1AiIGRhdGEtcGFydGljaXBhbnQtMj0iQVBJIj48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjIzMS45MDcyLDI2Mi4yNTc4LDI0MS45MDcyLDI2Ni4yNTc4LDIzMS45MDcyLDI3MC4yNTc4LDIzNS45MDcyLDI2Ni4yNTc4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxOyIgeDE9IjEyOC43MTA0IiB4Mj0iMjM3LjkwNzIiIHkxPSIyNjYuMjU3OCIgeTI9IjI2Ni4yNTc4Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iOTAuNzI3MSIgeD0iMTM1LjcxMDQiIHk9IjI2MS4xOTE5Ij4mIzMwNDttemF5JiMzMDU7IHV5Z3VsYTwvdGV4dD48L2c+PGcgY2xhc3M9Im1lc3NhZ2UiIGRhdGEtcGFydGljaXBhbnQtMT0iQVBJIiBkYXRhLXBhcnRpY2lwYW50LTI9IlUiPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNDguMzgwOSwyOTEuMzkwNiwzOC4zODA5LDI5NS4zOTA2LDQ4LjM4MDksMjk5LjM5MDYsNDQuMzgwOSwyOTUuMzkwNiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTtzdHJva2UtZGFzaGFycmF5OjIsMjsiIHgxPSI0Mi4zODA5IiB4Mj0iMjQyLjkwNzIiIHkxPSIyOTUuMzkwNiIgeTI9IjI5NS4zOTA2Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNDcuODA0MiIgeD0iNTQuMzgwOSIgeT0iMjkwLjMyNDciPkJhJiMzNTE7YXImIzMwNTtsJiMzMDU7PC90ZXh0PjwvZz48IS0tU1JDPVtQTy1uM2U5MDM0M3QtdWc2SUdULW1DNDREa0NXMnM2a1UyNE5aZUNTbFU3eTZLUE54bml5X2lpWUhjRVNjbFFyaG9xZnFYQllsUmtZbld1WFFzRU9mblhXYS1FZVEyaTRyakhSRTNnanFRWFEwT3ZHWVc0alNKQVc4S1dnVU9RWWp1R3dNTVhMX0U4U3dyUVEyc0o1dVNLdjJiNTJra1ZFN1VISUR6QXB6ZDRKTFI1S2NVX01ZcTJEOUVFYTE5U1dWRy1pZjJUZE5VVS1kZkQxX29WbV84WnBaVEZ1S1BJeTRrUzlSR213WFlTMF0tLT48L2c+PC9zdmc+" class="uml" alt="uml diagram" title="" /></p>
+<h2 id="c4-c4-plantuml-ile">C4 (C4-PlantUML ile)<a class="headerlink" href="#c4-c4-plantuml-ile" title="Permanent link">&para;</a></h2>
+<p>Kurumsal/kapalı ağda C4-PlantUML dosyalarını dahil etmek için self-hosted PlantUML server önerilir. Açık PlantUML server üzerinde dış include genellikle desteklenir.</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgZGF0YS1kaWFncmFtLXR5cGU9IkRFU0NSSVBUSU9OIiBoZWlnaHQ9IjMyNnB4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBzdHlsZT0id2lkdGg6MTk0cHg7aGVpZ2h0OjMyNnB4O2JhY2tncm91bmQ6I0ZGRkZGRjsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDE5NCAzMjYiIHdpZHRoPSIxOTRweCIgem9vbUFuZFBhbj0ibWFnbmlmeSI+PGRlZnMvPjxnPjwhLS1lbnRpdHkgdXNlci0tPjxnIGNsYXNzPSJlbnRpdHkiIGRhdGEtZW50aXR5PSJ1c2VyIiBkYXRhLXNvdXJjZS1saW5lPSIzNzkiIGRhdGEtdWlkPSJlbnQwMDAyIiBpZD0iZW50aXR5X3VzZXIiPjxyZWN0IGZpbGw9IiMwODQyN0IiIGhlaWdodD0iMTUzLjE3NjciIHN0eWxlPSJzdHJva2U6IzA3M0I2RjtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9IjE4MS4xMjk5IiB4PSI3IiB5PSI3Ii8+PHRleHQgZmlsbD0iI0ZGRkZGRiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtc3R5bGU9Iml0YWxpYyIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI1NS44MTY0IiB4PSI2OS42NTY3IiB5PSIyOC4xMzg3Ij4mIzE3MTtwZXJzb24mIzE4Nzs8L3RleHQ+PGltYWdlIGhlaWdodD0iNTIiIHdpZHRoPSI1MiIgeD0iNzEuNzE4OCIgeGxpbms6aHJlZj0iZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFEUUFBQUEwQ0FZQUFBREZlQnZyQUFBR1dFbEVRVlI0WHUyWUMweFRWeGpIZFdhYkJYUTYzZVowVzlTNUdlWXdNOVBObURnTklLSXdKZWpBRnpJVng1eE9NZXAwQWtXUU4vSVNIeFZVVUVFVVFSR2hWTXJMRWxFQmdTc3czaUJ3cFJSS29SUXVENkZuNTdpd21ITXAzRUpEaS9HZi9OTG15NzNuL0wvZW5uTys3NDZicUc4LzdrMkNGaGpyMEFLcVlNNHZuanMyT1YwbmZDTFNpVEJ1RGhHVlNoQ1J5Zm1FM3cwQllldHptOURkNW50OGtoRjdPbjZmS3FBRlJzSVNtNkRESHRkUzB3VDVWWlZsdFUxQUpKR0JWaGtGWkZRWGFPdm9BbzB0N2FDcXZobGtsOVNSd1hGUEhob2R2SGh0dW9ueklueWNrVUFMREljcHhrNXpmL09PY1UzSUxLNnVGMHRCYjE4ZkdFcVN0ZzZROVUrZDdCaUhLNWkveGNjUUgzTzQwQUxLZ3BJNXhra01JaXJxR3pxN1grSytoMVFGS1FadVYxTUVldHY5amZHeGh3TXRvQ3k3dmFLOWkyc2FSYjE5Y3R3clk2Ry9JZnRpVXZvOFMrODErUGpLUWdzb3c0KzJaL1prRnRZSXUzcVVmeks0Q3FzYXdHNnZHSTZPa2VNMGZCNWxvQVVZTW43eWF2Yk15d25aUW1sN0orNXQySXBPZTVhMWFHZWd4UUR6TVlZV1lBTEx3T0hkNzNZRTJNTmRUSXFiR29tZUN5WGd5Tm1FRUh3K1phQUZtS0N6eXBGbEg4eWpwTzFkdUtjUkt6d3BMMzZhaWZNQ2ZFNm0wQUpNK0dDMUV5c3R0NExxN3VuRi9ZeFkvT3h5c0d6UHVSaDhUcWJRQWt5QVd6V3JvVmxHOWNtSHY3TXBVazRKQ1N6WkVhT2IwTlExSjFoVVZ3K0ZtMUdGaUFvaDJPRis2MjFDL2RBQ1RFQi9PVmlyVVV4S0hHV1ZXZkFjL0h3MGJIUVRnbWNRNjQ2Z2lCcE9xVE9Va3JMS3dGTGJzNk9iRU5xMmo1N25VcW84VkpIUXJua3hQbXYwdDIxNHNFNll2OWxuZmVXTFpuSGZDR280WENVMWpXQ3ZiK3pvSDZ6OW5JOTlSTGJJVlBlVWJxWVFXWHJXZnFOZit2U0RpdFAwM0VvaDNQRndiMG9ydjd3ZS9Pb2VwYmJpOUgrc1hHOTRRek9pbnBmRHJ4cFFkL3ZYT1c3NjdJMmU2bTBmRUtqQjIrY1h5MzVjV0ZQZDBkbU5leDFTQlZWQ2NQd0NUNkM3OVpSbU5IajliSFdKUEhMN1FXSDE4NFlXME0zZ2FZbGEyc0dEdktwbnNIV1AvMktEaCthMDRLK3owTnIvc1AwRlhsclNrN0ppMkxCMTFvcGFRRk5yTzJocG80QkVTb0Y2Y1Jzb3Eyc0NqNHBxaXZ5ak1nU3dCYkdBUjhBVWZKeVJRQXVvZ2xsbWJ1dFcyWVh3RHAySkowNUhQeVF1M2NzaWd1OCtJWnd2ODRrdHpwSEVaK2J1eGxxR0RscjRmYXFBRmhqcjBBSk1RVjJydHFFakMxVU5rNHorUTl2UVlTSkwzMzRDZnEwaXRBd2MzdSsvSDMxcVEyRHNQVGpHZVB4YXB0QUNURURKZkwzWm0yMXVmN1h4WU5BOXlpVTBtWEsvbWtwWnNDTks0QUxmaGwrdkNBTzdZQjRxb2RDOXNQV21OamxkcHhiYkJOMzVjTzBKUGZ4YXB0QUNnekhUekUzM0dJZExQaTZxSllYaU5xbFlTc2xiWWFXQTNvcktJSERoOXhiWE5FcWkwd3JJNDhFODBvSWRUcTdZeHlsZHZPczBkNGxORU4vUUxvVDhNeUNXRE9mbGtuQnpJSnRhT3JwUVBZanVSWi9OY1BNUVNkbzdDeXFGb29Db0RIS3A3UmsrN21Fb2FJR0IrSFM5cTRHMVd4U1JYVkpYaWw3dkR0WjY5L2IyQVJuVi9XcGJyaFcxZ3FwNlNWOEZLYVlnbmZBN0VEYTN2Zm9CQnFzQlg4SXhKREM1WjVVTm5YNDNCQTgrTW5YNUFmcDRCL2MxRUxRQXpqZmJmRTFPaHFVVWxwTmlScTk0VlNrMEgvd0JlaUw1ZVRsZmJmYjVBNjVSYmR3ZkRpM3dPdk8zK0pnNWgvS2Zvdk5FWFpMTDVlaUp5dTltRkpYTnMvUmFDVGVOaWJoUFJnbk5XT2VxZnlBdzdqNTZNcG9nOUhiV0t6d3Q5WE56OXptNFYwWUpHUis2NU1EUEttdkRCMWFuNmhwYndRYjdhNWRoQXpnWDl6dG9RaCtidWl4enZaS1NJSloyNEdPcVhWRXBCUGpXeW04bDdublFoSmJ2NVhnbVpKYW85RFd2cW9UcVFwTWpvYi9EZzNncTdsdGhRZ2NDNGtMS1lSR3BxZG9mY0ZjQWo1S2x1RytGQ2ZuZnpBaEJaNG1tNnV6dFJ3QWVKK2E0N3dFVFF0dGlLRGNuREI5RWt4U1RYZ0JnaWNRc29XbHJUeXdNdjUvTHhRZlJKQW1JYWdEWCtadVRVRzRwQ2ZUM0I3OU5TR1AxeGlXVUFkZlFUMHpYRUt4b2RUaXhqNjhNMWlLb1d4SDhQTEJvWnlDemhCQldKMitHUEMxOWdZK2pFZXJvNmdHMjNqRmhuNnc3cVl2N1ZwalE3STBleS8vbUpDYVcxbXBXdGRBTWE4dWdtSWYxQzZ4OFRiVU1IVmk0YjRVSklYUzMrcTdZNlg3TEEzYU1naXVKVDBGa2NyN2F1SjZjTHo5M0ovT0ZYV0NjaTk1MnYxMlRqZGd6Y0w5REpvUkFCZUFzTXpmVGhkWUJYdkJrVmh2ZjJ3UjVmbW5wdFYvYjBGRUg5NGhEQzR4MWFJR3h6cjlYQmd1anNXT1BjUUFBQUFCSlJVNUVya0pnZ2c9PSIgeT0iMzAuOTY4OCIvPjx0ZXh0IGZpbGw9IiNGRkZGRkYiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iYm9sZCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI3Ny4zOTg0IiB4PSI1OC44NjU3IiB5PSI5Ny41MTI2Ij5LdWxsYW4mIzMwNTtjJiMzMDU7PC90ZXh0Pjx0ZXh0IGZpbGw9IiNGRkZGRkYiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjQuNDUwMiIgeD0iOTUuMzM5OCIgeT0iMTE0LjI4MTIiPiYjMTYwOzwvdGV4dD48dGV4dCBmaWxsPSIjRkZGRkZGIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI2MS43NTU5IiB4PSIxNyIgeT0iMTMwLjU3OCI+QmVsZ2VsZXJpPC90ZXh0Pjx0ZXh0IGZpbGw9IiNGRkZGRkYiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjQuNDUwMiIgeD0iNzguNzU1OSIgeT0iMTMwLjU3OCI+JiMxNjA7PC90ZXh0Pjx0ZXh0IGZpbGw9IiNGRkZGRkYiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjczLjU3NTIiIHg9IjgzLjIwNjEiIHk9IjEzMC41NzgiPmcmIzI0NjtyJiMyNTI7bnQmIzI1MjtsZXI8L3RleHQ+PHRleHQgZmlsbD0iI0ZGRkZGRiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNC40NTAyIiB4PSIxNTYuNzgxMyIgeT0iMTMwLjU3OCI+JiMxNjA7PC90ZXh0Pjx0ZXh0IGZpbGw9IiNGRkZGRkYiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjE2Ljg5ODQiIHg9IjE2MS4yMzE0IiB5PSIxMzAuNTc4Ij52ZTwvdGV4dD48dGV4dCBmaWxsPSIjRkZGRkZGIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI1MS42Nzk3IiB4PSI3MS43MjUxIiB5PSIxNDYuODc0OSI+aW16YWxhcjwvdGV4dD48L2c+PCEtLWVudGl0eSBpbXphaW8tLT48ZyBjbGFzcz0iZW50aXR5IiBkYXRhLWVudGl0eT0iaW16YWlvIiBkYXRhLXNvdXJjZS1saW5lPSIzOTgiIGRhdGEtdWlkPSJlbnQwMDAzIiBpZD0iZW50aXR5X2ltemFpbyI+PHJlY3QgZmlsbD0iIzExNjhCRCIgaGVpZ2h0PSI4NS4xODc1IiBzdHlsZT0ic3Ryb2tlOiMzQzdGQzA7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSIxMjYuNzUiIHg9IjM0LjE5IiB5PSIyMzUuMTciLz48dGV4dCBmaWxsPSIjRkZGRkZGIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC1zdHlsZT0iaXRhbGljIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjU4LjA2NjQiIHg9IjY4LjUzMTgiIHk9IjI1Ni4zMDg3Ij4mIzE3MTtzeXN0ZW0mIzE4Nzs8L3RleHQ+PHRleHQgZmlsbD0iI0ZGRkZGRiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSJib2xkIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjY0LjgyMDMiIHg9IjY1LjE1NDgiIHk9IjI3My45OTAzIj5pbXphLmlvPC90ZXh0Pjx0ZXh0IGZpbGw9IiNGRkZGRkYiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjQuNDUwMiIgeD0iOTUuMzM5OSIgeT0iMjkwLjc1ODkiPiYjMTYwOzwvdGV4dD48dGV4dCBmaWxsPSIjRkZGRkZGIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIzMy42OTQzIiB4PSI0NC4xOSIgeT0iMzA3LjA1NTciPiYjMzA0O216YTwvdGV4dD48dGV4dCBmaWxsPSIjRkZGRkZGIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0LjQ1MDIiIHg9Ijc3Ljg4NDMiIHk9IjMwNy4wNTU3Ij4mIzE2MDs8L3RleHQ+PHRleHQgZmlsbD0iI0ZGRkZGRiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNjguNjA1NSIgeD0iODIuMzM0NSIgeT0iMzA3LjA1NTciPnBsYXRmb3JtdTwvdGV4dD48L2c+PCEtLWxpbmsgdXNlciB0byBpbXphaW8tLT48ZyBjbGFzcz0ibGluayIgZGF0YS1lbnRpdHktMT0idXNlciIgZGF0YS1lbnRpdHktMj0iaW16YWlvIiBkYXRhLXNvdXJjZS1saW5lPSIxNzczIiBkYXRhLXVpZD0ibG5rNCIgaWQ9ImxpbmtfdXNlcl9pbXphaW8iPjxwYXRoIGQ9Ik05Ny41NiwxNjAuNTQgQzk3LjU2LDE4NS44MiA5Ny41NiwyMDUuMDYgOTcuNTYsMjI2LjgiIGZpbGw9Im5vbmUiIGlkPSJ1c2VyLXRvLWltemFpbyIgc3R5bGU9InN0cm9rZTojNjY2NjY2O3N0cm9rZS13aWR0aDoxOyIvPjxwb2x5Z29uIGZpbGw9IiM2NjY2NjYiIHBvaW50cz0iOTcuNTYsMjM0LjgsMTAwLjU2LDIyNi44LDk0LjU2LDIyNi44LDk3LjU2LDIzNC44IiBzdHlsZT0ic3Ryb2tlOiM2NjY2NjY7c3Ryb2tlLXdpZHRoOjE7Ii8+PHRleHQgZmlsbD0iIzY2NjY2NiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSJib2xkIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjU5LjMyNjIiIHg9Ijk4LjU2IiB5PSIyMDIuMzA4NyI+S3VsbGFuJiMzMDU7bTwvdGV4dD48L2c+PCEtLVNSQz1bSk8tekppRDA0OEh4RnlOWW5oUDR4OE9nOUlhMUFHOUhleEV6RUFWaXRMZGRsVjNwQ2ZIZlNLRUxwaVR4aUlTNUgzVXhjY3pjanUzRHJNZkJvbEJadElyZXNyN2VpSTNidW1vYk1ldm50aUU0X2UyLXcxS2lIcUxuX2x2R2hJUmpndExzU0lQV25wbkV3d1Jud2dLVURFejI2bUpoZDZNcU43VkVENkNnMk9QTTRfVWFzLVBWUnNGS25FWGJ6Ukg5bjJsTmVwWXBSOGotU2hQQ0tQVUd0bUdJOEN2VGQ3Q1BodjQ2OUZHUVhrTkJCb1ZCb3FiNkUyMWV5d3hhWHhwQTdqdWFzUEhmZVByMElUSlE5SnYtWVdPdll2LVREcTdDc0p0SWtVbUYtMnFyVVZLM10tLT48L2c+PC9zdmc+" class="uml" alt="uml diagram" title="" /></p>
+<blockquote>
+<p>Not: Eğer dış <code>!include</code> engellenirse, C4-PlantUML dosyalarını repoya indirip göreli yol ile <code>!include</code> kullanın veya self-hosted PlantUML Server'da <code>-DRELAXED_SECURITY</code> etkinleştirin.</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/imza-io" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://imza.io" target="_blank" rel="noopener" title="imza.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.expand", "toc.integrate", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="../../../_assets/javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

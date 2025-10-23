@@ -127,13 +127,15 @@ Notlar
 
 ## 📚 Dokümantasyon (MkDocs + C4)
 
-Platform dokümantasyonu `docs/` dizinindedir ve MkDocs (Material teması) ile yayınlanır. C4 diyagramları Mermaid ile ifade edilir ve tarayıcıda render edilir.
+Platform dokümantasyonu `docs/` dizinindedir ve MkDocs (Material teması) ile yayınlanır. C4 diyagramları Mermaid/PlantUML ile render edilir.
 
-- Yerel önizleme (önerilen): `pip install mkdocs-material` ardından `./scripts/docs-serve.ps1`
+- Bağımlılıkları kur (bir kez): `python -m pip install -r docs/requirements.txt`
+- Yerel önizleme: `./scripts/docs-serve.ps1`
 - Derleme: `./scripts/docs-build.ps1` (çıktı `site/` dizinine alınır)
 - Yapılandırma dosyası: `mkdocs.yml`
 - Başlangıç sayfası: `docs/index.md`
 - C4 diyagramları: `docs/architecture/c4/` (Context/Container/Component/Code)
+— PlantUML örnekleri: `docs/architecture/c4/plantuml.md` (```plantuml bloklarıyla)
 
 GitHub Pages Yayını
 - Repo Settings → Pages: Source = GitHub Actions

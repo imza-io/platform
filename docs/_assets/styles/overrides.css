@@ -1,0 +1,84 @@
+/* Brand colors derived from logo.svg
+   Primary (text/dark blue): #394d5a
+   Accent (pink/red):        #ff225c
+*/
+
+:root {
+  --md-primary-fg-color:              #394d5a;
+  --md-primary-fg-color--light:       #586e7e;
+  --md-primary-fg-color--dark:        #22313b;
+  --md-accent-fg-color:               #ff225c;
+  --md-accent-fg-color--transparent:  #ff225c20;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:              #394d5a;
+  --md-primary-fg-color--light:       #6f8593;
+  --md-primary-fg-color--dark:        #1d2a33;
+  --md-accent-fg-color:               #ff225c;
+  --md-accent-fg-color--transparent:  #ff225c33;
+}
+
+/* Optional: tweak link and code accents to align with brand */
+.md-typeset a { color: var(--md-accent-fg-color); }
+.md-typeset a:hover { opacity: .9; }
+
+.md-typeset code { border-color: var(--md-primary-fg-color--light); }
+
+/* Header: white background, brand colors (force override) */
+.md-header,
+.md-tabs { background-color: #ffffff !important; }
+
+.md-header, .md-tabs { color: #000000 !important; }
+.md-header .md-header__button,
+.md-header .md-header__title,
+.md-header .md-header__topic .md-ellipsis,
+.md-tabs__link { color: #000000 !important; }
+
+.md-tabs__link--active,
+.md-tabs__link:hover { color: var(--md-accent-fg-color) !important; }
+
+/* Subtle divider under white header */
+.md-header { box-shadow: 0 1px 0 rgba(0,0,0,0.06) !important; }
+
+/* Enlarge logo (img or inline svg) */
+.md-header__button.md-logo { padding: .25rem !important; }
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg { height: 56px !important; width: auto !important; }
+
+/* Footer: white background matching header */
+.md-footer { background-color: #ffffff !important; color: var(--md-primary-fg-color) !important; }
+.md-footer__inner,
+.md-footer-nav,
+.md-footer-meta { background-color: #ffffff !important; }
+.md-footer a { color: var(--md-primary-fg-color) !important; }
+.md-footer a:hover { color: var(--md-accent-fg-color) !important; }
+.md-footer { box-shadow: 0 -1px 0 rgba(0,0,0,0.06) !important; }
+
+/* Typography: Montserrat for text (loaded via Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+body { font-family: Montserrat, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
+code, pre, kbd { font-family: "JetBrains Mono", "Fira Code", Consolas, "SFMono-Regular", Menlo, Monaco, monospace; }
+
+/* Headings: black only, default weight */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 { color: #000000 !important; font-weight: inherit !important; }
+
+/* Header title/menu: black only, default weight */
+.md-header .md-header__title,
+.md-header .md-header__topic .md-ellipsis { color: #000000 !important; font-weight: inherit !important; }
+
+/* Side navigation: black default, accent on hover/active */
+.md-nav--primary .md-nav__link,
+.md-nav--secondary .md-nav__link { color: #000000 !important; font-weight: inherit !important; }
+.md-nav__link--active,
+.md-nav__link:focus,
+.md-nav__link:hover { color: var(--md-accent-fg-color) !important; }
+
+/* Footer social icons aligned with brand */
+.md-footer .md-social__link { color: var(--md-primary-fg-color) !important; }
+.md-footer .md-social__link:hover { color: var(--md-accent-fg-color) !important; }

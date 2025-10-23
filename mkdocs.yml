@@ -1,6 +1,8 @@
 site_name: imza.io Platform
 site_description: imza.io platformu için mimari ve ürün dokümantasyonu
-site_url: https://<org>.github.io/<repo>
+site_url: http://127.0.0.1:8000/platform
+repo_name: imza-io/platform
+repo_url: https://github.com/imza-io/platform
 
 theme:
   name: material
@@ -12,16 +14,35 @@ theme:
     - toc.integrate
     - content.code.copy
     - content.tabs.link
+  logo: _assets/images/logo.svg
+  favicon: _assets/images/logo.svg
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Koyu moda geç
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Aydınlık moda geç
+  font:
+    text: Montserrat
+    code: JetBrains Mono
 
 nav:
   - Anasayfa: index.md
   - Mimari:
     - Genel Bakış: architecture/overview.md
-    - C4 Modeli:
+  - C4 Modeli:
       - Context: architecture/c4/context.md
       - Container: architecture/c4/container.md
       - Component: architecture/c4/component.md
       - Code: architecture/c4/code.md
+      - PlantUML Örnekleri: architecture/c4/plantuml.md
   - Süreçler: processes/index.md
   - Ürünler: products/index.md
   - Projeler:
@@ -42,13 +63,19 @@ markdown_extensions:
   - pymdownx.emoji
   - pymdownx.details
   - pymdownx.keys
+  - plantuml_markdown:
+      server: https://www.plantuml.com/plantuml
+      format: svg
 
 plugins:
   - search
 
 extra_javascript:
   - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
-  - docs/_assets/javascripts/mermaid-init.js
+  - _assets/javascripts/mermaid-init.js
+
+extra_css:
+  - _assets/styles/overrides.css
 
 extra:
   social:

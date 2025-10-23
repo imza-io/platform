@@ -7,11 +7,31 @@ Write-Host "Building MkDocs site..." -ForegroundColor Cyan
 
 function Assert-Command($cmd) {
   $null = Get-Command $cmd -ErrorAction SilentlyContinue
-  if (-not $?) { throw "Komut bulunamadı: $cmd. Lütfen kurulumu yapın." }
+  if (-not $?) { return $false } else { return $true }
 }
 
-Assert-Command python
-Assert-Command mkdocs
+function Ensure-DocsDeps() {
+  if (-not (Assert-Command python)) {
+    throw "Python bulunamadı. Lütfen Python 3 kurun ve PATH'e ekleyin."
+  }
+
+  $needInstall = $false
+  if (-not (Assert-Command mkdocs)) { $needInstall = $true }
+
+  & python -c "import importlib.util, sys; sys.exit(0 if importlib.util.find_spec('plantuml_markdown') else 1)"
+  if ($LASTEXITCODE -ne 0) { $needInstall = $true }
+
+  if ($needInstall) {
+    Write-Host "Installing MkDocs deps from docs/requirements.txt..." -ForegroundColor Yellow
+    python -m pip install --upgrade pip
+    python -m pip install -r docs/requirements.txt
+  }
+}
+
+Ensure-DocsDeps
+
+if (-not (Assert-Command mkdocs)) {
+  throw "mkdocs komutu bulunamadı. Kurulum başarısız görünüyor."
+}
 
 mkdocs build --clean
-
