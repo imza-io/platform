@@ -24,3 +24,7 @@ coverage/
 # Docker
 **/.dockerignore
 .env
+
+# Project-specific build outputs
+SignGate/Switch/obj/
+SignGate/Switch/bin/
