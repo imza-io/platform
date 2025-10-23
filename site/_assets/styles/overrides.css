@@ -27,9 +27,8 @@
 
 /* Header: white background, brand colors (force override) */
 .md-header,
-.md-tabs { background-color: #ffffff !important; }
+.md-tabs { background-color: #ffffff !important; color: #000000 !important; }
 
-.md-header, .md-tabs { color: #000000 !important; }
 .md-header .md-header__button,
 .md-header .md-header__title,
 .md-header .md-header__topic .md-ellipsis,
@@ -44,16 +43,16 @@
 /* Enlarge logo (img or inline svg) */
 .md-header__button.md-logo { padding: .25rem !important; }
 .md-header__button.md-logo img,
-.md-header__button.md-logo svg { height: 56px !important; width: auto !important; }
+.md-header__button.md-logo svg { height: 64px !important; width: auto !important; }
 
 /* Footer: white background matching header */
-.md-footer { background-color: #ffffff !important; color: var(--md-primary-fg-color) !important; }
+.md-footer { background-color: #ffffff !important; color: var(--md-primary-fg-color) !important;  box-shadow: 0 -1px 0 rgba(0,0,0,0.06) !important;}
 .md-footer__inner,
 .md-footer-nav,
 .md-footer-meta { background-color: #ffffff !important; }
 .md-footer a { color: var(--md-primary-fg-color) !important; }
 .md-footer a:hover { color: var(--md-accent-fg-color) !important; }
-.md-footer { box-shadow: 0 -1px 0 rgba(0,0,0,0.06) !important; }
+.md-copyright { color: var(--md-primary-fg-color) !important; }
 
 /* Typography: Montserrat for text (loaded via Google Fonts) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
