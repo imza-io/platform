@@ -127,19 +127,20 @@ Notlar
 
 ## 📚 Dokümantasyon (MkDocs + C4)
 
-Platform dokümantasyonu `docs/` dizinindedir ve MkDocs (Material teması) ile yayınlanır. C4 diyagramları Mermaid/PlantUML ile render edilir.
+Platform dokümantasyonu `docs/` dizinindedir ve MkDocs (Material teması) ile yayınlanır. C4 diyagramları PlantUML ile render edilir.
 
 - Bağımlılıkları kur (bir kez): `python -m pip install -r docs/requirements.txt`
-- Yerel önizleme: `./scripts/docs-serve.ps1`
+- Yerel PlantUML sunucusu (önerilir): `./scripts/plantuml-up.ps1` (http://localhost:8080)
+- Yerel önizleme (public server): `./scripts/docs-serve.ps1`
+- Yerel önizleme (lokal PlantUML): `mkdocs serve -f mkdocs.local.yml`
 - Derleme: `./scripts/docs-build.ps1` (çıktı `site/` dizinine alınır)
 - Yapılandırma dosyası: `mkdocs.yml`
 - Başlangıç sayfası: `docs/index.md`
 - C4 diyagramları: `docs/architecture/c4/` (Context/Container/Component/Code)
-— PlantUML örnekleri: `docs/architecture/c4/plantuml.md` (```plantuml bloklarıyla)
 
 GitHub Pages Yayını
 - Repo Settings → Pages: Source = GitHub Actions
-- Workflow: `.github/workflows/docs.yml` push ile otomatik yayınlar
+- Workflow: `.github/workflows/docs.yml` push ile otomatik yayınlar (CI içinde PlantUML server başlatılır)
 - `mkdocs.yml` içindeki `site_url` değerini kendi repo adresinizle güncelleyin
 
 ---

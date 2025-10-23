@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  plantuml:
+    image: plantuml/plantuml-server:jetty
+    restart: unless-stopped
+    container_name: "${COMPOSE_PROJECT_NAME}_plantuml"
+    ports:
+      - "${PLANTUML_PORT:-8080}:8080"
+    environment:
+      - PLANTUML_LIMIT_SIZE=${PLANTUML_LIMIT_SIZE:-8192}
+      - JAVA_OPTS=-Xms${JAVA_XMS:-128m} -Xmx${JAVA_XMX:-512m} -Dplantuml.include.path=${INCLUDE_PATH:-/workspace/docs} -DPLANTUML_SECURITY_PROFILE=${SECURITY_PROFILE:-UNSECURE}
+    volumes:
+      - ../../docs:${INCLUDE_PATH:-/workspace/docs}:ro

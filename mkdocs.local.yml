@@ -1,0 +1,19 @@
+INHERIT: mkdocs.yml
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.emoji
+  - pymdownx.details
+  - pymdownx.keys
+  - plantuml_markdown:
+      server: http://localhost:8080
+      format: svg
+      http_method: POST
+      base_dir: docs

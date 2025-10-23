@@ -34,4 +34,16 @@ if (-not (Assert-Command mkdocs)) {
   throw "mkdocs komutu bulunamadı. Kurulum başarısız görünüyor."
 }
 
-mkdocs build --clean
+# Prefer local PlantUML server if reachable
+$useLocal = $false
+try {
+  $resp = Invoke-WebRequest -Uri "http://localhost:8080/" -UseBasicParsing -TimeoutSec 2
+  if ($resp.StatusCode -ge 200 -and $resp.StatusCode -lt 500) { $useLocal = $true }
+} catch {}
+
+if ($useLocal -and (Test-Path "mkdocs.local.yml")) {
+  Write-Host "Using local PlantUML server (mkdocs.local.yml)" -ForegroundColor Cyan
+  mkdocs build --clean -f mkdocs.local.yml
+} else {
+  mkdocs build --clean
+}

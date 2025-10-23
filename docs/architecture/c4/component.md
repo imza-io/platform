@@ -2,35 +2,35 @@
 title: C4 - Component
 ---
 
-# C4: Component (Backend API)
+# C4: Component (Backend API, C4-PlantUML)
 
 Backend API içindeki temel bileşenler ve bağımlılıklar.
 
-```mermaid
-flowchart TB
-  subgraph API[Backend API]
-    ctrl[Controllers]
-    appsvc[Application Services]
-    dom[Domain]
-    infra[Infrastructure]
-  end
+```plantuml
+@startuml C4_Component
+!include _assets/plantuml/C4_Component.puml
 
-  subgraph Integrations[Dış Entegrasyonlar]
-    mssp[MSSP]
-    eshs[ESHS/OCSP/TS]
-    notify[E-posta/SMS]
-  end
+Container(api, "Backend API", "ASP.NET")
 
-  ctrl --> appsvc
-  appsvc --> dom
-  appsvc --> infra
-  infra --> mssp
-  infra --> eshs
-  infra --> notify
+Component(ctrl, "Controllers", "HTTP endpoints")
+Component(appsvc, "Application Services", "Use-case orkestrasyonu")
+Component(dom, "Domain", "İş kuralları")
+Component(infra, "Infrastructure", "Dış kaynak adaptörleri")
+
+Component_Ext(mssp, "MSSP", "Mobil imza sağlayıcıları")
+Component_Ext(eshs, "ESHS/OCSP/TS", "Doğrulama/Zaman damgası")
+Component_Ext(notify, "E‑posta/SMS", "Bildirim")
+
+Rel(ctrl, appsvc, "Çağrı")
+Rel(appsvc, dom, "İş kuralları")
+Rel(appsvc, infra, "Adaptörler")
+Rel(infra, mssp, "Mobil imza")
+Rel(infra, eshs, "OCSP/CRL/TS")
+Rel(infra, notify, "Bildirim")
+@enduml
 ```
 
 Prensipler
 - Controller’lar ince, iş kuralları domain’de
 - Application Services orkestrasyon ve transaction sınırları için
 - Infrastructure dış kaynaklara erişim adaptörlerini barındırır
-

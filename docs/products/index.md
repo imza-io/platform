@@ -10,7 +10,7 @@ Bu meta repo altında yer alan ürünler `products/<urun-adi>` dizininde submodu
 
 ## Liste
 
+- SignGate — İmza geçidi ve ilgili bileşenler (submodule: `products/SignGate`)
 - (Örnek) api — Backend servisleri
 - (Örnek) web — Web Portal
 - (Örnek) mobile — Mobil Uygulamalar
-

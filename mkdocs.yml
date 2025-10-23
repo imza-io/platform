@@ -37,19 +37,31 @@ nav:
   - Anasayfa: index.md
   - Mimari:
     - Genel Bakış: architecture/overview.md
-  - C4 Modeli:
+    - C4 Modeli:
       - Context: architecture/c4/context.md
       - Container: architecture/c4/container.md
       - Component: architecture/c4/component.md
       - Code: architecture/c4/code.md
-      - PlantUML Örnekleri: architecture/c4/plantuml.md
   - Süreçler: processes/index.md
-  - Ürünler: products/index.md
+  - Ürünler:
+    - Genel Bakış: products/index.md
+    - SignGate:
+      - Ürün: products/signgate/index.md
+      - Mimarî: products/signgate/architecture.md
+      - API Referansı: products/signgate/api.md
+      - Entegrasyon: products/signgate/integration.md
+      - Dağıtım: products/signgate/deployment.md
+      - Ticari Bilgiler: products/signgate/commercial.md
   - Projeler:
     - Genel: projects/index.md
     - Örnek Proje:
       - Proje: projects/sample-project/index.md
       - v0.1.0: projects/sample-project/releases/0.1.0.md
+    - SignGate:
+      - Proje: projects/signgate/index.md
+      - Validator: projects/signgate/validator.md
+      - v2.0.1 (Taslak): projects/signgate/releases/2.0.1.md
+      - v2.0.0: projects/signgate/releases/2.0.0.md
 
 markdown_extensions:
   - admonition
@@ -66,6 +78,8 @@ markdown_extensions:
   - plantuml_markdown:
       server: https://www.plantuml.com/plantuml
       format: svg
+      base_dir: docs
+      http_method: POST
 
 plugins:
   - search

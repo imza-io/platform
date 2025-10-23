@@ -27,8 +27,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r docs/requirements.txt
 
-      - name: Build site
-        run: mkdocs build --clean
+      - name: Start PlantUML server
+        run: |
+          docker run -d --name plantuml \
+            -p 8080:8080 \
+            -e PLANTUML_LIMIT_SIZE=8192 \
+            -e JAVA_OPTS="-Dplantuml.include.path=/workspace/docs -DPLANTUML_SECURITY_PROFILE=UNSECURE" \
+            -v "${{ github.workspace }}/docs:/workspace/docs:ro" \
+            plantuml/plantuml-server:jetty
+          # simple health check
+          for i in {1..20}; do curl -fsS http://localhost:8080/ || sleep 1; done
+
+      - name: Build site (local PlantUML)
+        run: mkdocs build --clean -f mkdocs.local.yml
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

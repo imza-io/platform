@@ -1,0 +1,4 @@
+[submodule "products/SignGate"]
+	path = products/SignGate
+	url = https://github.com/cloudpeer-tech/imzaio.esig.git
+	branch = develop

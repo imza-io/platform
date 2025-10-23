@@ -2,30 +2,32 @@
 title: C4 - Code
 ---
 
-# C4: Code (Örnek)
+# C4: Code (Örnek, PlantUML)
 
-Bu seviye, belirli bir bileşenin (ör. Belge İmzalama) örnek sınıf diyagramını temsil eder.
+Belirli bir bileşenin (ör. Belge İmzalama) örnek sınıf diyagramı.
 
-```mermaid
-classDiagram
-  class SigningService {
-    +Sign(documentId, signerId)
-    -validateSigner()
-    -applySignature()
-  }
+```plantuml
+@startuml
+skinparam classAttributeIconSize 0
 
-  class SignatureProvider {
-    +Sign(content, cert)
-  }
+class SigningService {
+  +Sign(documentId, signerId)
+  -validateSigner()
+  -applySignature()
+}
 
-  class DocumentRepository {
-    +GetById(id)
-    +Save(document)
-  }
+class SignatureProvider {
+  +Sign(content, cert)
+}
 
-  SigningService --> DocumentRepository
-  SigningService --> SignatureProvider
+class DocumentRepository {
+  +GetById(id)
+  +Save(document)
+}
+
+SigningService --> DocumentRepository
+SigningService --> SignatureProvider
+@enduml
 ```
 
 > Not: Bu diyagram örnektir; gerçek sınıf ve metodlar proje ilerledikçe güncellenecektir.
-

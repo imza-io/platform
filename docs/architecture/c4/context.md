@@ -2,39 +2,38 @@
 title: C4 - Context
 ---
 
-# C4: System Context
+# C4: System Context (C4-PlantUML)
 
-Platformun dış kullanıcıları ve komşu sistemlerle etkileşimini gösterir.
+imza.io platformunun dış kullanıcılar ve komşu sistemlerle etkileşimini gösterir.
 
-```mermaid
-flowchart TB
-  %% Dış aktörler
-  user["Kullanıcı\n(Birey/Kurum)"]
-  admin["Yönetici"]
+```plantuml
+@startuml C4_Context
+!include _assets/plantuml/C4_Context.puml
 
-  %% Komşu sistemler
-  edevlet[("e-Devlet")]
-  mssp[("MSSP / GSM Operatörleri")]
-  eshs[("ESHS / Zaman Damgası / OCSP")]
-  mail[("E-posta/SMS Servisleri")]
+Person(user, "Kullanıcı", "Birey/Kurum kullanıcılar")
+Person(admin, "Yönetici", "Yönetim ve operasyon")
 
-  %% Sistem
-  subgraph ImzaIO[imza.io Platformu]
-    portal["Web Portal"]
-    api["Backend API"]
-    mobile["Mobil Uygulamalar"]
-  end
+System_Boundary(imzaio, "imza.io Platformu") {
+  System_Ext(portal, "Web Portal")
+  System_Ext(mobile, "Mobil Uygulamalar")
+  System(api, "Backend API")
+}
 
-  user -->|Belgeleri görüntüle/İmzala| portal
-  user -->|Mobil imza| mobile
-  admin -->|Yönetim| portal
+System_Ext(edevlet, "e‑Devlet")
+System_Ext(mssp, "MSSP / GSM Operatörleri")
+System_Ext(eshs, "ESHS / Zaman Damgası / OCSP")
+System_Ext(mail, "E‑posta / SMS Servisleri")
 
-  portal --> api
-  mobile --> api
+Rel(user, portal, "Belgeleri görüntüle / imzala")
+Rel(user, mobile, "Mobil imza")
+Rel(admin, portal, "Yönetim")
 
-  api -->|Kimlik doğrulama| edevlet
-  api -->|İmza işlemleri| mssp
-  api -->|Kök sertifika/OCSP/TS| eshs
-  api -->|Bildirim| mail
+Rel(portal, api, "HTTP")
+Rel(mobile, api, "HTTP")
+
+Rel(api, edevlet, "Kimlik doğrulama")
+Rel(api, mssp, "İmza işlemleri")
+Rel(api, eshs, "OCSP/CRL/TS")
+Rel(api, mail, "Bildirim")
+@enduml
 ```
-
