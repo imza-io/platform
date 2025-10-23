@@ -1,0 +1,58 @@
+site_name: imza.io Platform
+site_description: imza.io platformu için mimari ve ürün dokümantasyonu
+site_url: https://<org>.github.io/<repo>
+
+theme:
+  name: material
+  language: tr
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - toc.integrate
+    - content.code.copy
+    - content.tabs.link
+
+nav:
+  - Anasayfa: index.md
+  - Mimari:
+    - Genel Bakış: architecture/overview.md
+    - C4 Modeli:
+      - Context: architecture/c4/context.md
+      - Container: architecture/c4/container.md
+      - Component: architecture/c4/component.md
+      - Code: architecture/c4/code.md
+  - Süreçler: processes/index.md
+  - Ürünler: products/index.md
+  - Projeler:
+    - Genel: projects/index.md
+    - Örnek Proje:
+      - Proje: projects/sample-project/index.md
+      - v0.1.0: projects/sample-project/releases/0.1.0.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.emoji
+  - pymdownx.details
+  - pymdownx.keys
+
+plugins:
+  - search
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
+  - docs/_assets/javascripts/mermaid-init.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/imza-io
+    - icon: fontawesome/solid/globe
+      link: https://imza.io
