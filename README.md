@@ -1,5 +1,6 @@
+#
 
-<img src="docs/_assets/images/logo.svg" alt="imza.io logo" width="180">
+![imza.io logo](docs/_assets/images/logo.svg){ width=180px }
 
 ## 🚀 Genel Bakış
 
@@ -8,18 +9,7 @@ Kullanıcılar belgeleri elektronik veya mobil imza ile, hızlı ve güvenli bi�
 
 ## 🎯 Proje Amacı
 
-Bu proje, mevcut platform bileşenlerini .NET 10 + Visual Studio 2026 Insiders üzerinde çalışan, SignalR tabanlı gerçek zamanlı mesajlaşma altyapısını modern DevOps bileşenleriyle kurmak, gözlemlenebilir, ölçeklenebilir ve kolay dağıtılabilir bir hale getirmeyi amaçlar.
-
-Sistem, hem geliştirici ortamında (WSL2 + Docker Desktop) hem de üretim ortamında (Docker Swarm veya ileride K3s) aynı şekilde yönetilebilecek bir mimariyi hedeflemektedir.
-
 ## 📁 Projeler
-
-| Proje | Açıklama | Doküman |
-|-------|----------|---------|
-
-🔗 [imza.io Resmi Sitesi](https://imza.io)
-
----
 
 ## 🧩 Temel Özellikler
 
@@ -101,24 +91,29 @@ Bu depo, imza.io platformunun meta reposudur. Ürünlere ait bağımsız repolar
   - `scripts/submodule-add.ps1` — Yeni bir ürünü submodule olarak ekler
 
 Kurulum / Klonlama
+
 - İlk klonlama (önerilen): `git clone --recurse-submodules <meta-repo-url>`
 - Mevcut klon için: `git submodule update --init --recursive`
 
 Yeni Ürün Ekleme
+
 - Örnek: `git submodule add -b main <repo-url> products/<urun-adi>`
 - Dal takibi (isteğe bağlı): `git config -f .gitmodules submodule.products/<urun-adi>.branch main`
 - Not: Submodule ekledikten sonra üst repoda `.gitmodules` ve `products/<urun-adi>` değişikliklerini commit etmeyi unutmayın.
 
 Güncelleme
+
 - Tüm alt depoları güncelle: `git submodule foreach --recursive git pull`
 - URL değişikliklerini senkronize et: `git submodule sync --recursive`
 
 Kaldırma
+
 - `git submodule deinit -f -- products/<urun-adi>`
 - `git rm -f products/<urun-adi>`
 - `.gitmodules` dosyasındaki ilgili `submodule.products/<urun-adi>` bölümünü silin ve değişiklikleri commit edin.
 
 Notlar
+
 - Submodule’ler üst repoda belirli bir commit’e sabitlenir; güncelledikten sonra üst repoda da commit gerekir.
 - Submodule içine girip (`cd products/<urun-adi>`) kendi remote’una push etmelisiniz; üst repodan submodule içeriği push edilmez.
 
@@ -129,7 +124,7 @@ Notlar
 Platform dokümantasyonu `docs/` dizinindedir ve MkDocs (Material teması) ile yayınlanır. C4 diyagramları PlantUML ile render edilir.
 
 - Bağımlılıkları kur (bir kez): `python -m pip install -r docs/requirements.txt`
-- Yerel PlantUML sunucusu (önerilir): `./scripts/plantuml-up.ps1` (http://localhost:8080)
+- Yerel PlantUML sunucusu (önerilir): `./scripts/plantuml-up.ps1` (<http://localhost:8080>)
 - Yerel önizleme (public server): `./scripts/docs-serve.ps1`
 - Yerel önizleme (lokal PlantUML): `mkdocs serve -f mkdocs.local.yml`
 - Derleme: `./scripts/docs-build.ps1` (çıktı `site/` dizinine alınır)
@@ -138,6 +133,7 @@ Platform dokümantasyonu `docs/` dizinindedir ve MkDocs (Material teması) ile y
 - C4 diyagramları: `docs/architecture/c4/` (Context/Container/Component/Code)
 
 GitHub Pages Yayını
+
 - Repo Settings → Pages: Source = GitHub Actions
 - Workflow: `.github/workflows/docs.yml` push ile otomatik yayınlar (CI içinde PlantUML server başlatılır)
 - `mkdocs.yml` içindeki `site_url` değerini kendi repo adresinizle güncelleyin
@@ -154,6 +150,7 @@ Proje bazlı dokümantasyon ve sürüm notları `docs/projects/` altında tutulu
 - MkDocs menüsü: `mkdocs.yml` → `nav` altında “Projeler” bölümüne ilgili yolları ekleyin
 
 Örnek
+
 - Örnek proje sayfası: `docs/projects/sample-project/index.md`
 - Örnek release notu: `docs/projects/sample-project/releases/0.1.0.md`
 
@@ -180,7 +177,7 @@ Kayıtlar (en yeni en üstte):
 
 ## 📞 İletişim
 
-📧 **info@imza.io**
+📧 **<info@imza.io>**
 🌐 [https://imza.io](https://imza.io)
 💼 [LinkedIn](https://www.linkedin.com/company/imza-io)
 
