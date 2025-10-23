@@ -1,6 +1,6 @@
 #
 
-![imza.io logo](docs/_assets/images/logo.svg){ width=180px }
+![imza.io logo](docs/_assets/images/logo.svg)
 
 ## 🚀 Genel Bakış
 
