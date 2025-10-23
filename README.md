@@ -1,6 +1,5 @@
-# imza.io
 
-![imza.io logo](docs/_assets//images/logo.svg)
+<img src="docs/_assets/images/logo.svg" alt="imza.io logo" width="180">
 
 ## 🚀 Genel Bakış
 
