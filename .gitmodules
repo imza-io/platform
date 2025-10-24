@@ -2,3 +2,7 @@
 	path = products/SignGate
 	url = https://github.com/cloudpeer-tech/imzaio.esig.git
 	branch = develop
+[submodule "products/Easy"]
+	path = products/Easy
+	url = https://github.com/cloudpeer-tech/imzaio-easy.git
+	branch = develop
