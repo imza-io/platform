@@ -1,9 +1,9 @@
 <#
-  Starts a local PlantUML server via Docker Compose on http://localhost:8080
-  Usage: ./scripts/plantuml-up.ps1
+  Stops the local Redis server started via docker compose.
+  Usage: ./scripts/redis-down.ps1
 #>
 
-Write-Host "Starting PlantUML server (Docker) on http://localhost:8080 ..." -ForegroundColor Cyan
+Write-Host "Stopping Redis..." -ForegroundColor Cyan
 
 function Assert-Command($cmd) {
   $null = Get-Command $cmd -ErrorAction SilentlyContinue
@@ -11,15 +11,15 @@ function Assert-Command($cmd) {
 }
 
 if (-not (Assert-Command docker)) {
-  throw "Docker bulunamadı. Lütfen Docker Desktop kurun ve tekrar deneyin."
+  throw "Docker bulunamadı. Docker Desktop kurulu mu?"
 }
 
 $rootDir = (Split-Path $PSScriptRoot -Parent)
-$composeDir = Join-Path $rootDir "deploy/plantuml"
+$composeDir = Join-Path $rootDir "deploy/redis"
 
 # Resolve project name from root .env or environment
 $projectName = $env:COMPOSE_PROJECT_NAME
-$rootEnv = Join-Path "deploy" ".env"
+$rootEnv = Join-Path $"deploy" ".env"
 if (Test-Path $rootEnv) {
   foreach ($line in Get-Content $rootEnv) {
     if ($line -match '^\s*COMPOSE_PROJECT_NAME\s*=\s*(.+)\s*$') { $projectName = $Matches[1].Trim(); break }
@@ -28,7 +28,7 @@ if (Test-Path $rootEnv) {
 if (-not $projectName) { $projectName = "imzaio" }
 
 pushd $composeDir | Out-Null
-docker compose --project-name $projectName --env-file ../.env up -d
+docker compose --project-name $projectName down
 popd | Out-Null
 
-Write-Host "PlantUML server started. Test: http://localhost:8080" -ForegroundColor Green
+Write-Host "Redis stopped." -ForegroundColor Green

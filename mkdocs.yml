@@ -62,6 +62,8 @@ nav:
       - Validator: projects/signgate/validator.md
       - v2.0.1 (Taslak): projects/signgate/releases/2.0.1.md
       - v2.0.0: projects/signgate/releases/2.0.0.md
+  - DevOps:
+    - Redis TLS: deployment/redis-tls.md
 
 markdown_extensions:
   - admonition

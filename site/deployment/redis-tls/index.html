@@ -10,28 +10,26 @@
       
       
       
-        <link rel="canonical" href="http://127.0.0.1:8000/platform/architecture/c4/code/">
+        <link rel="canonical" href="http://127.0.0.1:8000/platform/deployment/redis-tls/">
       
       
-        <link rel="prev" href="../component/">
+        <link rel="prev" href="../../projects/signgate/releases/2.0.0/">
       
       
-        <link rel="next" href="../../../processes/">
       
-      
-      <link rel="icon" href="../../../_assets/images/logo.svg">
+      <link rel="icon" href="../../_assets/images/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>C4 - Code - imza.io Platform</title>
+        <title>Redis TLS - imza.io Platform</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../_assets/styles/overrides.css">
+      <link rel="stylesheet" href="../../_assets/styles/overrides.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#c4-code-ornek-plantuml" class="md-skip">
+        <a href="#redis-tls-kurulumu-yerel-gelistirme" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -94,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Başlık">
-    <a href="../../.." title="imza.io Platform" class="md-header__button md-logo" aria-label="imza.io Platform" data-md-component="logo">
+    <a href="../.." title="imza.io Platform" class="md-header__button md-logo" aria-label="imza.io Platform" data-md-component="logo">
       
-  <img src="../../../_assets/images/logo.svg" alt="logo">
+  <img src="../../_assets/images/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              C4 - Code
+              Redis TLS
             
           </span>
         </div>
@@ -231,9 +229,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigasyon" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="imza.io Platform" class="md-nav__button md-logo" aria-label="imza.io Platform" data-md-component="logo">
+    <a href="../.." title="imza.io Platform" class="md-nav__button md-logo" aria-label="imza.io Platform" data-md-component="logo">
       
-  <img src="../../../_assets/images/logo.svg" alt="logo">
+  <img src="../../_assets/images/logo.svg" alt="logo">
 
     </a>
     imza.io Platform
@@ -260,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -279,20 +277,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -308,7 +306,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Mimari
@@ -322,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/" class="md-nav__link">
+      <a href="../../architecture/overview/" class="md-nav__link">
         
   
   
@@ -342,20 +340,20 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -371,7 +369,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             C4 Modeli
@@ -385,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../context/" class="md-nav__link">
+      <a href="../../architecture/c4/context/" class="md-nav__link">
         
   
   
@@ -408,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../container/" class="md-nav__link">
+      <a href="../../architecture/c4/container/" class="md-nav__link">
         
   
   
@@ -431,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../component/" class="md-nav__link">
+      <a href="../../architecture/c4/component/" class="md-nav__link">
         
   
   
@@ -451,19 +449,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../architecture/c4/code/" class="md-nav__link">
         
   
   
@@ -474,7 +463,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -502,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../processes/" class="md-nav__link">
+      <a href="../../processes/" class="md-nav__link">
         
   
   
@@ -564,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../products/" class="md-nav__link">
+      <a href="../../products/" class="md-nav__link">
         
   
   
@@ -627,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../products/signgate/" class="md-nav__link">
+      <a href="../../products/signgate/" class="md-nav__link">
         
   
   
@@ -650,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../products/signgate/architecture/" class="md-nav__link">
+      <a href="../../products/signgate/architecture/" class="md-nav__link">
         
   
   
@@ -673,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../products/signgate/api/" class="md-nav__link">
+      <a href="../../products/signgate/api/" class="md-nav__link">
         
   
   
@@ -696,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../products/signgate/integration/" class="md-nav__link">
+      <a href="../../products/signgate/integration/" class="md-nav__link">
         
   
   
@@ -719,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../products/signgate/deployment/" class="md-nav__link">
+      <a href="../../products/signgate/deployment/" class="md-nav__link">
         
   
   
@@ -742,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../products/signgate/commercial/" class="md-nav__link">
+      <a href="../../products/signgate/commercial/" class="md-nav__link">
         
   
   
@@ -820,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/" class="md-nav__link">
+      <a href="../../projects/" class="md-nav__link">
         
   
   
@@ -883,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/sample-project/" class="md-nav__link">
+      <a href="../../projects/sample-project/" class="md-nav__link">
         
   
   
@@ -906,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/sample-project/releases/0.1.0/" class="md-nav__link">
+      <a href="../../projects/sample-project/releases/0.1.0/" class="md-nav__link">
         
   
   
@@ -977,7 +965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/signgate/" class="md-nav__link">
+      <a href="../../projects/signgate/" class="md-nav__link">
         
   
   
@@ -1000,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/signgate/validator/" class="md-nav__link">
+      <a href="../../projects/signgate/validator/" class="md-nav__link">
         
   
   
@@ -1023,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/signgate/releases/2.0.1/" class="md-nav__link">
+      <a href="../../projects/signgate/releases/2.0.1/" class="md-nav__link">
         
   
   
@@ -1046,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/signgate/releases/2.0.0/" class="md-nav__link">
+      <a href="../../projects/signgate/releases/2.0.0/" class="md-nav__link">
         
   
   
@@ -1081,20 +1069,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1110,7 +1098,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             DevOps
@@ -1121,10 +1109,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../deployment/redis-tls/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Redis TLS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1135,6 +1145,146 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openssl-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenSSL Kurulumu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-sertifikalar-uretin" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Sertifikaları Üretin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-redisi-tls-ile-baslatn" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Redis’i TLS ile Başlatın
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ca-sertifikasn-sisteme-guvenilir-olarak-ekleyin" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) CA Sertifikasını Sisteme Güvenilir Olarak Ekleyin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3) CA Sertifikasını Sisteme Güvenilir Olarak Ekleyin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      macOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-baglant-testi-redis-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Bağlantı Testi (redis-cli)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-net-istemci-ornekleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) .NET İstemci Örnekleri
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5) .NET İstemci Örnekleri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stackexchangeredis" class="md-nav__link">
+    <span class="md-ellipsis">
+      StackExchange.Redis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicestackredis" class="md-nav__link">
+    <span class="md-ellipsis">
+      ServiceStack.Redis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorun-giderme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sorun Giderme
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1166,21 +1316,114 @@
   
 
 
-<h1 id="c4-code-ornek-plantuml">C4: Code (Örnek, PlantUML)<a class="headerlink" href="#c4-code-ornek-plantuml" title="Permanent link">&para;</a></h1>
-<p>Belirli bir bileşenin (ör. Belge İmzalama) örnek sınıf diyagramı.</p>
-<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgZGF0YS1kaWFncmFtLXR5cGU9IkNMQVNTIiBoZWlnaHQ9IjI1MXB4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBzdHlsZT0id2lkdGg6Mzg2cHg7aGVpZ2h0OjI1MXB4O2JhY2tncm91bmQ6I0ZGRkZGRjsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDM4NiAyNTEiIHdpZHRoPSIzODZweCIgem9vbUFuZFBhbj0ibWFnbmlmeSI+PGRlZnMvPjxnPjwhLS1jbGFzcyBTaWduaW5nU2VydmljZS0tPjxnIGNsYXNzPSJlbnRpdHkiIGRhdGEtZW50aXR5PSJTaWduaW5nU2VydmljZSIgZGF0YS1zb3VyY2UtbGluZT0iMyIgZGF0YS11aWQ9ImVudDAwMDIiIGlkPSJlbnRpdHlfU2lnbmluZ1NlcnZpY2UiPjxyZWN0IGZpbGw9IiNGMUYxRjEiIGhlaWdodD0iOTYuODkwNiIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iMjE0LjA3MDMiIHg9IjgwLjk5IiB5PSI3Ii8+PGVsbGlwc2UgY3g9IjEzMS44MTE4IiBjeT0iMjMiIGZpbGw9IiNBREQxQjIiIHJ4PSIxMSIgcnk9IjExIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7Ii8+PHBhdGggZD0iTTEzNC43ODA1LDI4LjY0MDYgUTEzNC4yMDI0LDI4LjkzNzUgMTMzLjU2MTgsMjkuMDc4MSBRMTMyLjkyMTIsMjkuMjM0NCAxMzIuMjE4LDI5LjIzNDQgUTEyOS43MTgsMjkuMjM0NCAxMjguMzg5OSwyNy41OTM4IFExMjcuMDc3NCwyNS45Mzc1IDEyNy4wNzc0LDIyLjgxMjUgUTEyNy4wNzc0LDE5LjY4NzUgMTI4LjM4OTksMTguMDMxMyBRMTI5LjcxOCwxNi4zNzUgMTMyLjIxOCwxNi4zNzUgUTEzMi45MjEyLDE2LjM3NSAxMzMuNTYxOCwxNi41MzEzIFExMzQuMjE4LDE2LjY4NzUgMTM0Ljc4MDUsMTYuOTg0NCBMMTM0Ljc4MDUsMTkuNzAzMSBRMTM0LjE1NTUsMTkuMTI1IDEzMy41NjE4LDE4Ljg1OTQgUTEzMi45NjgsMTguNTc4MSAxMzIuMzQzLDE4LjU3ODEgUTEzMC45OTkzLDE4LjU3ODEgMTMwLjMxMTgsMTkuNjU2MyBRMTI5LjYyNDMsMjAuNzE4OCAxMjkuNjI0MywyMi44MTI1IFExMjkuNjI0MywyNC45MDYzIDEzMC4zMTE4LDI1Ljk4NDQgUTEzMC45OTkzLDI3LjA0NjkgMTMyLjM0MywyNy4wNDY5IFExMzIuOTY4LDI3LjA0NjkgMTMzLjU2MTgsMjYuNzgxMyBRMTM0LjE1NTUsMjYuNSAxMzQuNzgwNSwyNS45MjE5IEwxMzQuNzgwNSwyOC42NDA2IFogIiBmaWxsPSIjMDAwMDAwIi8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTAzLjkyNjgiIHg9IjE1Mi4zMTE4IiB5PSIyNy44NDY3Ij5TaWduaW5nU2VydmljZTwvdGV4dD48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHgxPSI4MS45OSIgeDI9IjI5NC4wNjAzIiB5MT0iMzkiIHkyPSIzOSIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgeDE9IjgxLjk5IiB4Mj0iMjk0LjA2MDMiIHkxPSI0NyIgeTI9IjQ3Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMjAyLjA3MDMiIHg9Ijg2Ljk5IiB5PSI2My45OTUxIj4rU2lnbihkb2N1bWVudElkLCBzaWduZXJJZCk8L3RleHQ+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTE3LjA5MjgiIHg9Ijg2Ljk5IiB5PSI4MC4yOTIiPi12YWxpZGF0ZVNpZ25lcigpPC90ZXh0Pjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjEyMi4zNDk2IiB4PSI4Ni45OSIgeT0iOTYuNTg4OSI+LWFwcGx5U2lnbmF0dXJlKCk8L3RleHQ+PC9nPjwhLS1jbGFzcyBTaWduYXR1cmVQcm92aWRlci0tPjxnIGNsYXNzPSJlbnRpdHkiIGRhdGEtZW50aXR5PSJTaWduYXR1cmVQcm92aWRlciIgZGF0YS1zb3VyY2UtbGluZT0iOSIgZGF0YS11aWQ9ImVudDAwMDMiIGlkPSJlbnRpdHlfU2lnbmF0dXJlUHJvdmlkZXIiPjxyZWN0IGZpbGw9IiNGMUYxRjEiIGhlaWdodD0iNjQuMjk2OSIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iMTU4LjA0MSIgeD0iNyIgeT0iMTcyLjAzIi8+PGVsbGlwc2UgY3g9IjIyIiBjeT0iMTg4LjAzIiBmaWxsPSIjQUREMUIyIiByeD0iMTEiIHJ5PSIxMSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxOyIvPjxwYXRoIGQ9Ik0yNC45Njg4LDE5My42NzA2IFEyNC4zOTA2LDE5My45Njc1IDIzLjc1LDE5NC4xMDgxIFEyMy4xMDk0LDE5NC4yNjQ0IDIyLjQwNjMsMTk0LjI2NDQgUTE5LjkwNjMsMTk0LjI2NDQgMTguNTc4MSwxOTIuNjIzOCBRMTcuMjY1NiwxOTAuOTY3NSAxNy4yNjU2LDE4Ny44NDI1IFExNy4yNjU2LDE4NC43MTc1IDE4LjU3ODEsMTgzLjA2MTMgUTE5LjkwNjMsMTgxLjQwNSAyMi40MDYzLDE4MS40MDUgUTIzLjEwOTQsMTgxLjQwNSAyMy43NSwxODEuNTYxMyBRMjQuNDA2MywxODEuNzE3NSAyNC45Njg4LDE4Mi4wMTQ0IEwyNC45Njg4LDE4NC43MzMxIFEyNC4zNDM4LDE4NC4xNTUgMjMuNzUsMTgzLjg4OTQgUTIzLjE1NjMsMTgzLjYwODEgMjIuNTMxMywxODMuNjA4MSBRMjEuMTg3NSwxODMuNjA4MSAyMC41LDE4NC42ODYzIFExOS44MTI1LDE4NS43NDg4IDE5LjgxMjUsMTg3Ljg0MjUgUTE5LjgxMjUsMTg5LjkzNjMgMjAuNSwxOTEuMDE0NCBRMjEuMTg3NSwxOTIuMDc2OSAyMi41MzEzLDE5Mi4wNzY5IFEyMy4xNTYzLDE5Mi4wNzY5IDIzLjc1LDE5MS44MTEzIFEyNC4zNDM4LDE5MS41MyAyNC45Njg4LDE5MC45NTE5IEwyNC45Njg4LDE5My42NzA2IFogIiBmaWxsPSIjMDAwMDAwIi8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTI2LjA0MSIgeD0iMzYiIHk9IjE5Mi44NzY3Ij5TaWduYXR1cmVQcm92aWRlcjwvdGV4dD48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHgxPSI4IiB4Mj0iMTY0LjA0MSIgeTE9IjIwNC4wMyIgeTI9IjIwNC4wMyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgeDE9IjgiIHgyPSIxNjQuMDQxIiB5MT0iMjEyLjAzIiB5Mj0iMjEyLjAzIi8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTQzLjI0NzEiIHg9IjEzIiB5PSIyMjkuMDI1MSI+K1NpZ24oY29udGVudCwgY2VydCk8L3RleHQ+PC9nPjwhLS1jbGFzcyBEb2N1bWVudFJlcG9zaXRvcnktLT48ZyBjbGFzcz0iZW50aXR5IiBkYXRhLWVudGl0eT0iRG9jdW1lbnRSZXBvc2l0b3J5IiBkYXRhLXNvdXJjZS1saW5lPSIxMyIgZGF0YS11aWQ9ImVudDAwMDQiIGlkPSJlbnRpdHlfRG9jdW1lbnRSZXBvc2l0b3J5Ij48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjgwLjU5MzgiIHJ4PSIyLjUiIHJ5PSIyLjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9IjE3OS42MDE2IiB4PSIyMDAuMjIiIHk9IjE2My44OSIvPjxlbGxpcHNlIGN4PSIyMTUuMjIiIGN5PSIxNzkuODkiIGZpbGw9IiNBREQxQjIiIHJ4PSIxMSIgcnk9IjExIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7Ii8+PHBhdGggZD0iTTIxOC4xODg4LDE4NS41MzA2IFEyMTcuNjEwNiwxODUuODI3NSAyMTYuOTcsMTg1Ljk2ODEgUTIxNi4zMjk0LDE4Ni4xMjQ0IDIxNS42MjYzLDE4Ni4xMjQ0IFEyMTMuMTI2MywxODYuMTI0NCAyMTEuNzk4MSwxODQuNDgzOCBRMjEwLjQ4NTYsMTgyLjgyNzUgMjEwLjQ4NTYsMTc5LjcwMjUgUTIxMC40ODU2LDE3Ni41Nzc1IDIxMS43OTgxLDE3NC45MjEzIFEyMTMuMTI2MywxNzMuMjY1IDIxNS42MjYzLDE3My4yNjUgUTIxNi4zMjk0LDE3My4yNjUgMjE2Ljk3LDE3My40MjEzIFEyMTcuNjI2MywxNzMuNTc3NSAyMTguMTg4OCwxNzMuODc0NCBMMjE4LjE4ODgsMTc2LjU5MzEgUTIxNy41NjM4LDE3Ni4wMTUgMjE2Ljk3LDE3NS43NDk0IFEyMTYuMzc2MywxNzUuNDY4MSAyMTUuNzUxMywxNzUuNDY4MSBRMjE0LjQwNzUsMTc1LjQ2ODEgMjEzLjcyLDE3Ni41NDYzIFEyMTMuMDMyNSwxNzcuNjA4OCAyMTMuMDMyNSwxNzkuNzAyNSBRMjEzLjAzMjUsMTgxLjc5NjMgMjEzLjcyLDE4Mi44NzQ0IFEyMTQuNDA3NSwxODMuOTM2OSAyMTUuNzUxMywxODMuOTM2OSBRMjE2LjM3NjMsMTgzLjkzNjkgMjE2Ljk3LDE4My42NzEzIFEyMTcuNTYzOCwxODMuMzkgMjE4LjE4ODgsMTgyLjgxMTkgTDIxOC4xODg4LDE4NS41MzA2IFogIiBmaWxsPSIjMDAwMDAwIi8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTQ3LjYwMTYiIHg9IjIyOS4yMiIgeT0iMTg0LjczNjciPkRvY3VtZW50UmVwb3NpdG9yeTwvdGV4dD48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHgxPSIyMDEuMjIiIHgyPSIzNzguODIxNiIgeTE9IjE5NS44OSIgeTI9IjE5NS44OSIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgeDE9IjIwMS4yMiIgeDI9IjM3OC44MjE2IiB5MT0iMjAzLjg5IiB5Mj0iMjAzLjg5Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iOTEuMjg3MSIgeD0iMjA2LjIyIiB5PSIyMjAuODg1MSI+K0dldEJ5SWQoaWQpPC90ZXh0Pjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjEyNy42NTQzIiB4PSIyMDYuMjIiIHk9IjIzNy4xODIiPitTYXZlKGRvY3VtZW50KTwvdGV4dD48L2c+PCEtLWxpbmsgU2lnbmluZ1NlcnZpY2UgdG8gRG9jdW1lbnRSZXBvc2l0b3J5LS0+PGcgY2xhc3M9ImxpbmsiIGRhdGEtZW50aXR5LTE9IlNpZ25pbmdTZXJ2aWNlIiBkYXRhLWVudGl0eS0yPSJEb2N1bWVudFJlcG9zaXRvcnkiIGRhdGEtc291cmNlLWxpbmU9IjE4IiBkYXRhLXVpZD0ibG5rNSIgaWQ9ImxpbmtfU2lnbmluZ1NlcnZpY2VfRG9jdW1lbnRSZXBvc2l0b3J5Ij48cGF0aCBjb2RlTGluZT0iMTgiIGQ9Ik0yMjEuMTQsMTA0LjA4IEMyMzQuNTIsMTIzLjMzIDI0Ni4zNTY0LDE0MC4zNTI3IDI1OS4xMDY0LDE1OC43MDI3IiBmaWxsPSJub25lIiBpZD0iU2lnbmluZ1NlcnZpY2UtdG8tRG9jdW1lbnRSZXBvc2l0b3J5IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyNjIuNTMsMTYzLjYzLDI2MC42Nzk0LDE1My45NTY2LDI1OS42NzcsMTU5LjUyMzksMjU0LjEwOTcsMTU4LjUyMTQsMjYyLjUzLDE2My42MyIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxOyIvPjwvZz48IS0tbGluayBTaWduaW5nU2VydmljZSB0byBTaWduYXR1cmVQcm92aWRlci0tPjxnIGNsYXNzPSJsaW5rIiBkYXRhLWVudGl0eS0xPSJTaWduaW5nU2VydmljZSIgZGF0YS1lbnRpdHktMj0iU2lnbmF0dXJlUHJvdmlkZXIiIGRhdGEtc291cmNlLWxpbmU9IjE5IiBkYXRhLXVpZD0ibG5rNiIgaWQ9ImxpbmtfU2lnbmluZ1NlcnZpY2VfU2lnbmF0dXJlUHJvdmlkZXIiPjxwYXRoIGNvZGVMaW5lPSIxOSIgZD0iTTE1NC45LDEwNC4wOCBDMTM5LjQzLDEyNi4zNCAxMjQuODYzOCwxNDcuMjkyOCAxMTEuMTUzOCwxNjcuMDIyOCIgZmlsbD0ibm9uZSIgaWQ9IlNpZ25pbmdTZXJ2aWNlLXRvLVNpZ25hdHVyZVByb3ZpZGVyIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIxMDcuNzMsMTcxLjk1LDExNi4xNTA1LDE2Ni44NDE3LDExMC41ODMyLDE2Ny44NDQsMTA5LjU4MDksMTYyLjI3NjYsMTA3LjczLDE3MS45NSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxOyIvPjwvZz48IS0tU1JDPVtST3oxMmk4bTQ0TnRGS01NYlJSVzJHSDVhRXA0ZDIwY0duYmlhcDJQMWdmdVR6Q1lmTVlOVVBkX3ZxcnllMGtRVDJ6Q2ZzQ3lDWEZVMW1QZmw1RnUxQjRsWWxiN0E2bVRrYk8xOUpHV05hS3JhVDl3Q19KV01EZlFuMG8wZkRxTEpUOFRNaXNXUGJIY2VhRmVua2NmVUkzOHZCcmtkazZMVjQ4Qmo5SGQyU3hUakoxMGw0Z1NscWpsNDduNHpaSEVhR2xtUVBJc24ybkdBUHJXYVBrWkZtU3FwTTZaUHNsZ3AteTNdLS0+PC9nPjwvc3ZnPg==" class="uml" alt="uml diagram" title="" /></p>
+<h1 id="redis-tls-kurulumu-yerel-gelistirme">Redis TLS Kurulumu (Yerel Geliştirme)<a class="headerlink" href="#redis-tls-kurulumu-yerel-gelistirme" title="Permanent link">&para;</a></h1>
+<p>Bu rehber, yerel ortamda Redis’i TLS (şifreli) çalıştırma, self‑signed CA üretme ve istemcileri güvenli şekilde bağlama adımlarını içerir.</p>
+<h2 id="openssl-kurulumu">OpenSSL Kurulumu<a class="headerlink" href="#openssl-kurulumu" title="Permanent link">&para;</a></h2>
+<p>Sertifika üretimi için OpenSSL gerekir. Aşağıdaki scriptleri/komutları kullanabilirsiniz.</p>
+<ul>
+<li>Windows: <code>./scripts/openssl-install.ps1</code></li>
+<li>winget (ShiningLight.OpenSSL.Light) veya Chocolatey (openssl-light) ile kurar.</li>
+<li>macOS: <code>./scripts/openssl-install-macos.sh</code></li>
+<li>Homebrew ile <code>openssl@3</code> kurar; PATH için öneri verir.</li>
+<li>Linux: <code>./scripts/openssl-install-linux.sh</code></li>
+<li>Dağıtıma göre <code>openssl</code> paketini kurar.</li>
+</ul>
+<p>Kurulum sonrası doğrulama: <code>openssl version</code></p>
+<h2 id="1-sertifikalar-uretin">1) Sertifikaları Üretin<a class="headerlink" href="#1-sertifikalar-uretin" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Komut: <code>./scripts/redis-gencerts.ps1</code></li>
+<li>Üretilen dosyalar: <code>deploy/redis/tls/ca.crt</code>, <code>ca.key</code>, <code>redis.crt</code>, <code>redis.key</code></li>
+</ul>
 <blockquote>
-<p>Not: Bu diyagram örnektir; gerçek sınıf ve metodlar proje ilerledikçe güncellenecektir.</p>
+<p>Not: CN=localhost ve SAN olarak <code>DNS:localhost</code>, <code>IP:127.0.0.1</code> içerir. Yalnızca yerel geliştirme içindir.</p>
 </blockquote>
+<h2 id="2-redisi-tls-ile-baslatn">2) Redis’i TLS ile Başlatın<a class="headerlink" href="#2-redisi-tls-ile-baslatn" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Komut: <code>./scripts/redis-up.ps1</code></li>
+<li>Varsayılan TLS portu: <code>6379</code> (değiştirmek için <code>deploy/.env</code> içindeki <code>REDIS_TLS_PORT</code> değerini değiştirin)</li>
+</ul>
+<h2 id="3-ca-sertifikasn-sisteme-guvenilir-olarak-ekleyin">3) CA Sertifikasını Sisteme Güvenilir Olarak Ekleyin<a class="headerlink" href="#3-ca-sertifikasn-sisteme-guvenilir-olarak-ekleyin" title="Permanent link">&para;</a></h2>
+<p>Sertifika zinciri doğrulaması için istemcilerin <code>deploy/redis/tls/ca.crt</code> dosyasını güvenilir bir kök olarak tanıması gerekir.</p>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<ul>
+<li>PowerShell (Yönetici):</li>
+<li>Current User: <code>Import-Certificate -FilePath .\deploy\redis\tls\ca.crt -CertStoreLocation Cert:\CurrentUser\Root</code></li>
+<li>Local Machine: <code>Import-Certificate -FilePath .\deploy\redis\tls\ca.crt -CertStoreLocation Cert:\LocalMachine\Root</code></li>
+<li>Alternatif: <code>certmgr.msc</code> ile “Trusted Root Certification Authorities” altına <code>ca.crt</code> içe aktarın.</li>
+</ul>
+<h3 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Script ile: <code>./scripts/redis-import-ca-macos.sh</code></li>
+<li>Manuel (Terminal, sudo): <code>sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain deploy/redis/tls/ca.crt</code></li>
+<li>Alternatif: Keychain Access ile System keychain altına <code>ca.crt</code> dosyasını ekleyin ve “Always Trust” seçin.</li>
+</ul>
+<h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Script ile (otomatik algılama): <code>./scripts/redis-import-ca-linux.sh</code></li>
+<li>Manuel:</li>
+<li>Debian/Ubuntu:<ul>
+<li><code>sudo cp deploy/redis/tls/ca.crt /usr/local/share/ca-certificates/redis-ca.crt</code></li>
+<li><code>sudo update-ca-certificates</code></li>
+</ul>
+</li>
+<li>RHEL/CentOS/Fedora:<ul>
+<li><code>sudo cp deploy/redis/tls/ca.crt /etc/pki/ca-trust/source/anchors/redis-ca.crt</code></li>
+<li><code>sudo update-ca-trust</code></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>WSL kullanıyorsanız, ilgili Linux dağıtımında da CA’yı yukarıdaki Linux adımlarıyla ekleyin.</p>
+</blockquote>
+<h2 id="4-baglant-testi-redis-cli">4) Bağlantı Testi (redis-cli)<a class="headerlink" href="#4-baglant-testi-redis-cli" title="Permanent link">&para;</a></h2>
+<p><code>deploy/.env</code> içindeki <code>REDIS_PASSWORD</code> değerini kullanın.</p>
+<div class="highlight"><pre><span></span><code>redis-cli --tls -h localhost -p 6379 \
+  --cacert deploy/redis/tls/ca.crt \
+  -a &lt;PAROLA&gt; PING
+</code></pre></div>
+<p>Başarılı yanıt: <code>PONG</code></p>
+<h2 id="5-net-istemci-ornekleri">5) .NET İstemci Örnekleri<a class="headerlink" href="#5-net-istemci-ornekleri" title="Permanent link">&para;</a></h2>
+<h3 id="stackexchangeredis">StackExchange.Redis<a class="headerlink" href="#stackexchangeredis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Connection string:</li>
+<li><code>localhost:6379,ssl=True,sslHost=localhost,password=&lt;PAROLA&gt;,abortConnect=False</code></li>
+<li>Kod:
+<div class="highlight"><pre><span></span><code>using StackExchange.Redis;
+
+var options = ConfigurationOptions.Parse(&quot;localhost:6379&quot;);
+options.Ssl = true;
+options.SslHost = &quot;localhost&quot;; // CN/SAN ile eşleşmeli
+options.Password = &quot;&lt;PAROLA&gt;&quot;;
+options.AbortOnConnectFail = false;
+var mux = await ConnectionMultiplexer.ConnectAsync(options);
+</code></pre></div></li>
+</ul>
+<blockquote>
+<p>Not: CA güvenilir değilse bağlanma sırasında sertifika doğrulama hatası alırsınız. CA’yı güvenilir olarak ekleyin.</p>
+</blockquote>
+<h3 id="servicestackredis">ServiceStack.Redis<a class="headerlink" href="#servicestackredis" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>using ServiceStack.Redis;
+
+// rediss:// şeması TLS anlamına gelir
+using var manager = new RedisManagerPool(&quot;rediss://:&lt;PAROLA&gt;@localhost:6379&quot;);
+using var client = manager.GetClient();
+client.Ping();
+</code></pre></div>
+<h2 id="sorun-giderme">Sorun Giderme<a class="headerlink" href="#sorun-giderme" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>SSL certificate verify failed</code>:</li>
+<li>CA’yı güvenilir köklere eklediğinizden emin olun.</li>
+<li>Host adı eşleşmesi: <code>sslHost=localhost</code> kullanın ve sertifikada CN/SAN <code>localhost</code> olduğundan emin olun.</li>
+<li>Bağlantı kurulamadı:</li>
+<li><code>./scripts/redis-up.ps1</code> TLS sertifika dosyalarının varlığını kontrol eder; eksikse <code>./scripts/redis-gencerts.ps1</code> çalıştırın.</li>
+<li>Port çakışması için <code>REDIS_TLS_PORT</code> değerini değiştirin.</li>
+</ul>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -1252,14 +1495,14 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.expand", "toc.integrate", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.expand", "toc.integrate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       
-        <script src="../../../_assets/javascripts/mermaid-init.js"></script>
+        <script src="../../_assets/javascripts/mermaid-init.js"></script>
       
     
   </body>
