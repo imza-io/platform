@@ -1,4 +1,5 @@
 {
     "dotnet.preferCSharpExtension": true,
-    "dotnet.defaultSolution": "products/SignGate/ImzaIo.ESig.sln"
+    "dotnet.defaultSolution": "products/SignGate/ImzaIo.ESig.sln",
+    "java.compile.nullAnalysis.mode": "automatic"
 }
