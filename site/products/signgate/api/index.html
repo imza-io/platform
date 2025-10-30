@@ -645,7 +645,7 @@
   
   
   <span class="md-ellipsis">
-    Mimarî
+    Mimari
     
   </span>
   
@@ -1217,6 +1217,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deployment/elastic-apm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elastic APM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deployment/elastic-retention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Saklama & Sampling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deployment/scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scriptler
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1248,33 +1317,37 @@
 <h2 id="temel-bilgiler">Temel Bilgiler<a class="headerlink" href="#temel-bilgiler" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Base URL (örnek):</li>
-<li>Dev: https://dev.example.com</li>
-<li>Test: https://test.example.com</li>
-<li>Prod: https://api.example.com</li>
+<li>Dev: <a href="https://dev.example.com">https://dev.example.com</a></li>
+<li>Test: <a href="https://test.example.com">https://test.example.com</a></li>
+<li>Prod: <a href="https://api.example.com">https://api.example.com</a></li>
 <li>Kimlik Doğrulama: Bearer Token (OAuth2 / API Key kurulumunuza bağlı)</li>
 <li>İçerik Tipi: application/json</li>
 </ul>
 <h2 id="imzalama">İmzalama<a class="headerlink" href="#imzalama" title="Permanent link">&para;</a></h2>
-<p>POST <code>/api/sign/cades</code>
-- Amaç: CAdES imzası üretmek için oturum başlatma veya imzalama
-- Örnek istek
+<p>POST <code>/api/sign/cades</code></p>
+<ul>
+<li>Amaç: CAdES imzası üretmek için oturum başlatma veya imzalama</li>
+<li>Örnek istek</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;documentHash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;base64(SHA256)&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;signer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TCKN/UUID&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mobile|eimza&quot;</span><span class="w"> </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;requestId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 <h2 id="dogrulama">Doğrulama<a class="headerlink" href="#dogrulama" title="Permanent link">&para;</a></h2>
-<p>POST <code>/api/validate</code>
-- Amaç: İmza doğrulaması (OCSP/CRL/TS)
-- Örnek istek
+<p>POST <code>/api/validate</code></p>
+<ul>
+<li>Amaç: İmza doğrulaması (OCSP/CRL/TS)</li>
+<li>Örnek istek</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;document&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;base64(PDF|ASiC|CMS)&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;policies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;etsi-cades&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;etsi-pades&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 <h2 id="hata-modeli-ornek">Hata Modeli (Örnek)<a class="headerlink" href="#hata-modeli-ornek" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -1288,12 +1361,13 @@
 <ul>
 <li>OpenAPI şemasını <code>docs/products/signgate/openapi/signgate.yaml</code> yoluna ekleyin.</li>
 <li>İnteraktif dokümantasyon için aşağıdaki seçeneklerden birini tercih edin (opsiyonel):
-  1) ReDoc (CDN ile): Bu sayfaya HTML blok olarak ekleyebilirsiniz:
-  <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">redoc</span> <span class="na">spec-url</span><span class="o">=</span><span class="s">&quot;openapi/signgate.yaml&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">redoc</span><span class="p">&gt;</span>
+  1) ReDoc (CDN ile): Bu sayfaya HTML blok olarak ekleyebilirsiniz:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">redoc</span> <span class="na">spec-url</span><span class="o">=</span><span class="s">&quot;openapi/signgate.yaml&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">redoc</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-  2) Swagger UI (CDN ile):
-  <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;swagger&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<p>2) Swagger UI (CDN ile):</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;swagger&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/swagger-ui-dist/swagger-ui.css&quot;</span> <span class="p">/&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1301,8 +1375,7 @@
 <span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SwaggerUIBundle</span><span class="p">({</span><span class="w"> </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;openapi/signgate.yaml&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">dom_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#swagger&#39;</span><span class="w"> </span><span class="p">});</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div></li>
-</ul>
+</code></pre></div>
 <p>Not: CDN erişimi gerektirir. Tamamen offline kurulum için MkDocs eklentileri (örn. swagger-ui-tag) eklenebilir.</p>
 
 

@@ -24,7 +24,7 @@
     
     
       
-        <title>SignGate — Dağıtım ve Kurulum - imza.io Platform</title>
+        <title>SignGate – Dağıtım ve Kurulum - imza.io Platform</title>
       
     
     
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SignGate — Dağıtım ve Kurulum
+              SignGate – Dağıtım ve Kurulum
             
           </span>
         </div>
@@ -645,7 +645,7 @@
   
   
   <span class="md-ellipsis">
-    Mimarî
+    Mimari
     
   </span>
   
@@ -789,6 +789,15 @@
   <a href="#notlar" class="md-nav__link">
     <span class="md-ellipsis">
       Notlar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observability-elastic-apm-opentelemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observability (Elastic APM + OpenTelemetry)
     </span>
   </a>
   
@@ -1208,6 +1217,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deployment/elastic-apm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elastic APM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deployment/elastic-retention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Saklama & Sampling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deployment/scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scriptler
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1235,17 +1313,17 @@
 
 
 <h1 id="dagtm-ve-kurulum">Dağıtım ve Kurulum<a class="headerlink" href="#dagtm-ve-kurulum" title="Permanent link">&para;</a></h1>
-<p>Bu sayfa SignGate’i bileşenleriyle birlikte çalıştırmak için gereken önkoşullar ve temel kurulum adımlarını özetler.</p>
+<p>Bu sayfa SignGate'i bileşenleriyle birlikte çalıştırmak için gereken önkoşulları ve temel kurulum adımlarını özetler.</p>
 <h2 id="onkosullar">Önkoşullar<a class="headerlink" href="#onkosullar" title="Permanent link">&para;</a></h2>
 <ul>
-<li>.NET (API/EasyHub/TaskScheduler)</li>
+<li>.NET 8 SDK (API/EasyHub/TaskScheduler)</li>
 <li>Java 17+ ve Maven (Validator)</li>
-<li>RDBMS (EsigDB), Object Storage (belge deposu), Redis (cache)</li>
+<li>Veritabanı (EsigDB), Nesne Deposu (belge deposu), Redis (cache)</li>
 </ul>
 <h2 id="konfigurasyon">Konfigürasyon<a class="headerlink" href="#konfigurasyon" title="Permanent link">&para;</a></h2>
 <ul>
 <li>API/EasyHub/TaskScheduler: <code>appsettings.*.json</code> ve ortam değişkenleri</li>
-<li>Validator: <code>application.properties</code> (deployment’ta harici klasör önerilir)</li>
+<li>Validator: <code>application.properties</code> (deployment'ta harici klasör önerilir)</li>
 </ul>
 <h2 id="saglk-ve-izleme">Sağlık ve İzleme<a class="headerlink" href="#saglk-ve-izleme" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1258,7 +1336,14 @@
 <li>QR ekleme gibi özellikler için harici Image servisi gerekebilir</li>
 <li>Sertifika OCSP/CRL adreslerinin işlenmesi için TaskScheduler görevi tanımlayın</li>
 </ul>
-<p>Gelişmiş dağıtım ve CI/CD için proje dokümantasyonuna ve ürün repolarındaki pipeline dosyalarına bakın.</p>
+<h2 id="observability-elastic-apm-opentelemetry">Observability (Elastic APM + OpenTelemetry)<a class="headerlink" href="#observability-elastic-apm-opentelemetry" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Kurulum ve kullanım: <code>docs/deployment/elastic-apm.md</code></li>
+<li>Hızlı başlatma:</li>
+<li>Elastic stack: <code>./scripts/elastic-up.ps1 -Pull</code> (Windows) veya <code>bash scripts/elastic-up.sh --pull</code></li>
+<li>SignGate (AppHost): çözümü çalıştırın (SignGate.AppHost). AppHost servisler için <code>OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4317</code> ve <code>OTEL_EXPORTER_OTLP_PROTOCOL=grpc</code> geçirir.</li>
+<li>Kibana: <code>http://localhost:5601</code> üzerinden APM/Logs/Metrics görünümlerini kullanın.</li>
+</ul>
 
 
 

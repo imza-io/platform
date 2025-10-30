@@ -1,0 +1,64 @@
+version: "3.8"
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.14.3
+    container_name: ${COMPOSE_PROJECT_NAME}_observability_elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false # DEV ONLY. Enable and configure TLS+users for prod.
+      - xpack.security.enrollment.enabled=false
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.14.3
+    container_name: ${COMPOSE_PROJECT_NAME}_observability_kibana
+    depends_on:
+      - elasticsearch
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - XPACK_SECURITY_ENABLED=false # DEV ONLY.
+      - XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY=dev-dev-dev-dev-dev-dev-dev-dev-dev-dev-dev-dev
+    ports:
+      - "5601:5601"
+
+  apm-server:
+    image: docker.elastic.co/apm/apm-server:8.14.3
+    container_name: ${COMPOSE_PROJECT_NAME}_observability_apm-server
+    depends_on:
+      - elasticsearch
+      - kibana
+    command: ["--strict.perms=false", "-e", "-E", "http.host=0.0.0.0", "-c", "/usr/share/apm-server/apm-server.yml"]
+    volumes:
+      - ./apm-server.yml:/usr/share/apm-server/apm-server.yml:ro
+    ports:
+      - "8200:8200" # APM intake
+      # Do not publish OTLP ports from APM Server to host.
+      # Collector exposes 4317/4318 for applications; it forwards to APM Server internally.
+
+  otel-collector:
+    image: otel/opentelemetry-collector:0.97.0
+    container_name: ${COMPOSE_PROJECT_NAME}_observability_otel-collector
+    depends_on:
+      - apm-server
+    command: ["--config=/etc/otel-collector.yaml"]
+    volumes:
+      - ./otel-collector.yaml:/etc/otel-collector.yaml:ro
+    ports:
+      - "4317:4317" # for app gRPC
+      - "4318:4318" # for app HTTP
+      - "13133:13133" # health
+      - "1777:1777"   # pprof
+      - "55679:55679" # zpages
+
+volumes:
+  es-data:

@@ -1,0 +1,26 @@
+# NOTE: This configuration disables security and TLS for simplicity.
+# Do NOT use as-is in production. For production, enable xpack security
+# in Elasticsearch/Kibana, require auth here, and use TLS for all traffic.
+
+apm-server:
+  host: "0.0.0.0:8200"
+  auth:
+    anonymous:
+      enabled: true  # DEV ONLY. Disable in prod.
+
+  otlp:
+    enabled: true
+    grpc:
+      host: "0.0.0.0:4317"
+    http:
+      host: "0.0.0.0:4318"
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+
+setup.kibana:
+  host: "http://kibana:5601"
+
+logging:
+  level: info
+

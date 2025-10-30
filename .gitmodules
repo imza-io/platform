@@ -1,6 +1,6 @@
 [submodule "products/SignGate"]
 	path = products/SignGate
-	url = https://github.com/cloudpeer-tech/imzaio.esig.git
+	url = https://github.com/imza-io/signgate.git
 	branch = develop
 [submodule "products/Easy"]
 	path = products/Easy

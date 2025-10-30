@@ -47,7 +47,7 @@ nav:
     - Genel Bakış: products/index.md
     - SignGate:
       - Ürün: products/signgate/index.md
-      - Mimarî: products/signgate/architecture.md
+      - Mimari: products/signgate/architecture.md
       - API Referansı: products/signgate/api.md
       - Entegrasyon: products/signgate/integration.md
       - Dağıtım: products/signgate/deployment.md
@@ -64,6 +64,9 @@ nav:
       - v2.0.0: projects/signgate/releases/2.0.0.md
   - DevOps:
     - Redis TLS: deployment/redis-tls.md
+    - Elastic APM: deployment/elastic-apm.md
+    - Saklama & Sampling: deployment/elastic-retention.md
+    - Scriptler: deployment/scripts.md
 
 markdown_extensions:
   - admonition

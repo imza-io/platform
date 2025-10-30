@@ -1,0 +1,57 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch: {}
+  # optional: redact or sample here
+  # attributes/redact:
+  #   actions:
+  #     - key: http.request.header.authorization
+  #       action: delete
+  #     - key: db.statement
+  #       action: delete
+  # probabilistic_sampler:
+  #   hash_seed: 22
+  #   sampling_percentage: 10
+
+extensions:
+  health_check:
+    endpoint: 0.0.0.0:13133
+  pprof:
+    endpoint: 0.0.0.0:1777
+  zpages:
+    endpoint: 0.0.0.0:55679
+
+exporters:
+  # Send OTLP to Elastic APM Server's OTLP endpoints
+  otlp/elastic-grpc:
+    endpoint: apm-server:4317
+    tls:
+      insecure: true
+  otlp/elastic-http:
+    endpoint: http://apm-server:4318
+
+  # Example: also send to Aspire Dashboard (uncomment when running Aspire)
+  # otlp/aspire:
+  #   endpoint: http://aspire-dashboard:18889
+
+service:
+  extensions: [health_check, pprof, zpages]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp/elastic-grpc]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp/elastic-grpc]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp/elastic-http]

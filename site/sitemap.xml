@@ -2,98 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://127.0.0.1:8000/platform/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/architecture/overview/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/architecture/c4/code/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/architecture/c4/component/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/architecture/c4/container/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/architecture/c4/context/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:8000/platform/deployment/elastic-apm/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:8000/platform/deployment/elastic-retention/</loc>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/deployment/redis-tls/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:8000/platform/deployment/scripts/</loc>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/processes/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/products/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/products/signgate/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/products/signgate/api/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/products/signgate/architecture/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/products/signgate/commercial/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/products/signgate/deployment/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/products/signgate/integration/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/projects/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/projects/_project-template/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/projects/_release-template/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/projects/sample-project/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/projects/sample-project/releases/0.1.0/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/projects/signgate/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/projects/signgate/validator/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/projects/signgate/releases/2.0.0/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/platform/projects/signgate/releases/2.0.1/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
 </urlset>
